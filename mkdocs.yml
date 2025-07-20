@@ -16,3 +16,12 @@ nav:
   - Run-para: run-para.md
   - Ssh-para: ssh-para.md
   - Pgtree: pgtree.md
+
+plugins:
+  - search
+  # - mkdocs-material if using Material theme
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/joknarf
