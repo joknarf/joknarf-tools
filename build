@@ -1,0 +1,4 @@
+mkdocs build
+cp -r site/* docs/
+touch docs/.nojekyll
+
