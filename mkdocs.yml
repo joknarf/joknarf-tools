@@ -17,6 +17,7 @@ nav:
   - Ssh-para: ssh-para.md
   - Pgtree: pgtree.md
   - Sshautofs: sshautofs.md
+  - Mkshz: mkshz.md
 
 plugins:
   - search
