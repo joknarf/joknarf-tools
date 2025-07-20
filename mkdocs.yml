@@ -18,6 +18,7 @@ nav:
   - Pgtree: pgtree.md
   - Sshautofs: sshautofs.md
   - Mkshz: mkshz.md
+  - Targpg: targpg.md
 
 plugins:
   - search
