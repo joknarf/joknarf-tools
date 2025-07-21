@@ -251,6 +251,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Selector
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -262,6 +275,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      demo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      keys
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -617,6 +676,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      demo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      keys
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -634,9 +728,87 @@
   
 
 
-<h1 id="selector">Selector</h1>
-<p>Interactive shell menu system with fuzzy search and arrow-key navigation.</p>
-<p>GitHub: <a href="https://github.com/joknarf/selector">https://github.com/joknarf/selector</a></p>
+<h1 id="selector">selector</h1>
+<p>Shell interactive menu (bash/zsh/ksh compatible)</p>
+<p><img alt="image" src="https://github.com/joknarf/selector/assets/10117818/c3c782eb-ad34-4c31-b806-fbd30270f03a" /></p>
+<h2 id="usage">usage</h2>
+<pre><code>usage: selector [-p &lt;prompt&gt;] -i &lt;items&gt;|-f &lt;itemfile&gt; [-P &lt;y|n&gt;]
+args :
+  -p, --prompt          menu prompt
+  -i, --items           menu items \n separated
+  -f, --file            file with items
+  -F, --filter          regexp pattern filter items
+  -P, --powerline       y or n, powerline symbol usage
+  -a, --autofilter      y or n, filter at keystrokes
+  -k, --keyfunc         Custom additional key function
+</code></pre>
+<p>selector can be used as command line or sourced to be used as function (bash/zsh/ksh compatible)
+When sourced, the selected item is available as <code>$selected</code>.</p>
+<h2 id="demo">demo</h2>
+<p><img alt="selector" src="https://github.com/joknarf/selector/assets/10117818/586afdf3-fe0e-4801-b39e-db8efce6918c" /></p>
+<h2 id="keys">keys</h2>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>⇩</kbd></td>
+<td>select next item</td>
+</tr>
+<tr>
+<td><kbd>⇧</kbd></td>
+<td>select prev item</td>
+</tr>
+<tr>
+<td><kbd>End</kbd>/<kbd>⇨</kbd></td>
+<td>select last item</td>
+</tr>
+<tr>
+<td><kbd>Home</kbd>/<kbd>⇦</kbd></td>
+<td>select first item</td>
+</tr>
+<tr>
+<td><kbd>Shift</kdb>+<kbd>⇩</kbd>/<kbd>PgUp</kbd>/<kbd>Ctl</kbd>+<kbd>F</kbd></td>
+<td>next page</td>
+</tr>
+<tr>
+<td><kbd>Shift</kdb>+<kbd>⇧</kbd>/<kbd>PgDn</kbd>/<kbd>Ctl</kbd>+<kbd>B</kbd></td>
+<td>previous page</td>
+</tr>
+<tr>
+<td><kbd>Del</kbd>/<kbd>F8</kbd></td>
+<td>delete item in menu</td>
+</tr>
+<tr>
+<td><kbd>Esc</kbd></td>
+<td>exit</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd>+<kbd>A</kbd></td>
+<td>use all screen to display menu</td>
+</tr>
+<tr>
+<td><kbd>Tab</kbd></td>
+<td>apply/new filter</td>
+</tr>
+<tr>
+<td><kbd>Enter</kbd></td>
+<td>validate item selected</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>filter pattern can be applied entering text</li>
+<li>selection can be done entering item number</li>
+</ul>
+<p>demo usage at:
+* <a href="https://github.com/joknarf/cdhist">cdhist</a> : navigate in directories from command line with arrow keys with dir history (bash/zsh/ksh)
+* <a href="https://github.com/joknarf/redo">redo</a> : replacement for <kbd>Ctrl</kbd>+<kbd>R</kbd> and <kbd>Esc</kbd>+<kbd>/</kbd> to search in command history (bash/zsh)
+* <a href="https://github.com/joknarf/complete-ng">complete-ng</a> : bash command line completion replacement for multiple choices output with interactive menu</p>
 
 
 
