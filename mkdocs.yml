@@ -10,7 +10,9 @@ nav:
   - Redo: redo.md
   - Seedee: seedee.md
   - Thefly: thefly.md
+  - Shell-ng: shell-ng.md
   - Complete-ng: complete-ng.md
+  - Nerdp: nerdp.md
   - Pywebfs: pywebfs.md
   - Pywebexec: pywebexec.md
   - Run-para: run-para.md
