@@ -55,8 +55,8 @@ putting on command line : `work` and hitting <kbd>Shift</kbd><kbd>⇧</kbd> will
 |<kbd>⇦</kbd>                    | browse parent directory                               |
 |<kbd>Shift</kbd><kbd>⇨</kbd>   | browse selected directory with subdirectories depth 4 |
 |<kbd>Shift</kbd><kbd>⇦</kbd>   | back to only show subdirectories depth 1              |
-|<kbd>Shift</kdb><kbd>⇩</kbd>/<kbd>PgUp</kbd>/<kbd>Ctl</kbd><kbd>F</kbd>| next page    |
-|<kbd>Shift</kdb><kbd>⇧</kbd>/<kbd>PgDn</kbd>/<kbd>Ctl</kbd><kbd>B</kbd>| previous page|
+|<kbd>Shift</kbd><kbd>⇩</kbd>/<kbd>PgUp</kbd>/<kbd>Ctl</kbd><kbd>F</kbd>| next page    |
+|<kbd>Shift</kbd><kbd>⇧</kbd>/<kbd>PgDn</kbd>/<kbd>Ctl</kbd><kbd>B</kbd>| previous page|
 |<kbd>Del</kbd>/<kbd>F8</kbd>    | delete directory entry in history                     |
 |<kbd>Esc</kbd>                  | exit                                                  |
 |<kbd>Ctrl</kbd><kbd>A</kbd>    | use all screen to display menu                        |
