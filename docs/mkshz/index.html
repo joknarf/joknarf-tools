@@ -745,6 +745,7 @@
 <li>sed (gnu/bsd)</li>
 <li>tar / gzip</li>
 </ul>
+<p>you can use mkshz.compat if using old OS distribution (tar/sed missing features)</p>
 <h2 id="usage">usage</h2>
 <p>usage: <code>mkshz &lt;file.shz&gt; &lt;dir&gt; [&lt;command&gt; [--tmp-exec] [--pre-extract &lt;command&gt;] &lt;tar options&gt;]</code></p>
 <p>Creates a shell script <code>&lt;file.shz&gt;</code> with embedded tgz archive created from <code>&lt;dir&gt;</code> content.
@@ -814,10 +815,12 @@ echo &quot;$shz: Executing command: $cmd $*&quot; &gt;&amp;2
 &quot;$cmd&quot; &quot;$@&quot;
 exit $?
 
-__tgz__ ====== binary data starts here ==========================================```
-* script execution
+__tgz__ ====== binary data starts here ==========================================
 </code></pre>
-<p>user@host:/myapp/distrib $ ./installapp.shz --register myhost
+<ul>
+<li>script execution</li>
+</ul>
+<pre><code>user@host:/myapp/distrib $ ./installapp.shz --register myhost
 installapp.shz: Extracting/Executing pre-extract script: app/bin/stopapp.sh
   stopapp.sh: Stopping app
   stopapp.sh: Done
@@ -825,7 +828,7 @@ installapp.shz: Extracting archive directory 'app' in '/myapp/distrib'
 installapp.shz: Executing command: app/bin/setup.sh --register myhost
   config.sh: Configuring app
   config.sh: Starting app
-```</p>
+</code></pre>
 
 
 

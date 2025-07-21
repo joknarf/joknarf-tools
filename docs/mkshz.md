@@ -13,6 +13,8 @@ self extracting shell gzip tarball packager.
 * sed (gnu/bsd)
 * tar / gzip
 
+you can use mkshz.compat if using old OS distribution (tar/sed missing features)
+
 ## usage
 
 usage: `mkshz <file.shz> <dir> [<command> [--tmp-exec] [--pre-extract <command>] <tar options>]`
@@ -89,8 +91,11 @@ echo "$shz: Executing command: $cmd $*" >&2
 "$cmd" "$@"
 exit $?
 
-__tgz__ ====== binary data starts here ==========================================```
+__tgz__ ====== binary data starts here ==========================================
+```
+
 * script execution
+
 ```
 user@host:/myapp/distrib $ ./installapp.shz --register myhost
 installapp.shz: Extracting/Executing pre-extract script: app/bin/stopapp.sh
