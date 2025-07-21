@@ -634,9 +634,119 @@
   
 
 
-<h1 id="run-para">Run-para</h1>
-<p>Parallel job execution manager with live status visualization.</p>
-<p>GitHub: <a href="https://github.com/joknarf/run-para">https://github.com/joknarf/run-para</a></p>
+<p><a href="https://pypi.org/project/run-para/"><img alt="Pypi version" src="https://img.shields.io/pypi/v/run-para.svg" /></a>
+<img alt="example" src="https://github.com/joknarf/run-para/actions/workflows/python-publish.yml/badge.svg" />
+<a href="https://shields.io/"><img alt="Licence" src="https://img.shields.io/badge/licence-MIT-blue.svg" /></a>
+<a href="https://pepy.tech/project/run-para"><img alt="" src="https://pepy.tech/badge/run-para" /></a>
+<a href="https://shields.io/"><img alt="Python versions" src="https://img.shields.io/badge/python-3.6+-blue.svg" /></a></p>
+<h1 id="run-para">run-para</h1>
+<p>Parallel jobs manager CLI
+* POSIX/Linux/MacOS/Windows compatible
+* Launch parallel command and maps list of params to command, with interactive display of the running commands outputs
+* Keep all output in log files
+* Interactive pause/resume/abort jobs, kill stuck command interactively.</p>
+<p>Take a look at <a href="https://github.com/joknarf/ssh-para">ssh-para</a> if you need parallel ssh jobs to multiple servers</p>
+<p><img alt="run-para" src="https://github.com/user-attachments/assets/536424fd-20de-4512-a28f-9971d3e3311d" /></p>
+<h1 id="installation">installation</h1>
+<pre><code class="language-shell">pip install run-para
+</code></pre>
+<p>By default, <code>run-para</code> uses Nerd Fonts glyphs, modern terminals can now render the glyphs without installing specific font (the symbols can be overridden with SSHP_SYM_* environment variables, see below)</p>
+<h1 id="quick-start">quick start</h1>
+<pre><code>Run parallel commands:
+$ run-para -P host1 host2 host3 -- ssh -n @1 &quot;echo @1 is reachable&quot;
+Review last run results:
+$ run-para -l
+Review hosts statuses for last run:
+$ run-para -L *.status
+View failed hosts list:
+$ run-para -L failed.status
+Show output of command on all hosts:
+$ run-para -L *.out
+Show output of command for failed hosts:
+$ run-para -L *.failed
+Show output of command for host1:
+$ run-para -L host1.out
+</code></pre>
+<h1 id="params-mapping-to-command">params mapping to command</h1>
+<p>run-para will match parameters to the command according to <code>@x</code> mapping.<br />
+using -P options, can only pass 1 parameter to command<br />
+using -f paramsfile, can pass multiple parameters  </p>
+<p>example:</p>
+<pre><code class="language-shell">run-para -P param1 param2 -- echo @1
+</code></pre>
+<p>will launch:</p>
+<pre><code class="language-shell">echo param1
+echo param2
+</code></pre>
+<pre><code class="language-shell">run-para -f params.txt -- curl -OL &quot;http://@1/download/@2&quot;
+params.txt:
+server1 &quot;the file1.zip&quot;
+server2 &quot;the file2.zip&quot;
+</code></pre>
+<p>will launch:</p>
+<pre><code class="language-shell">curl -OL &quot;http://server1/download/the file1.zip&quot;
+curl -OL &quot;http://server2/download/the file2.zip&quot;
+</code></pre>
+<h1 id="usage">usage</h1>
+<pre><code>run-para -h
+</code></pre>
+<pre><code>usage: run-para [-h] [-V] [-j JOB] [-d DIRLOG] [-p PARALLEL] [-t TIMEOUT] [-v] [-D DELAY]
+                [-f PARAMSFILE | -P PARAM [PARAM ...] | -l | -L LOGS [LOGS ...]]
+                [command ...]
+
+run-para v1.run-para.dev
+
+positional arguments:
+  command
+
+options:
+  -h, --help            show this help message and exit
+  -V, --version         run-para version
+  -j JOB, --job JOB     Job name added subdir to dirlog
+  -d DIRLOG, --dirlog DIRLOG
+                        directory for ouput log files (default: ~/.run-para)
+  -m MAXWIDTH, --maxwidth MAXWIDTH
+                        max width to use to display params
+  -p PARALLEL, --parallel PARALLEL
+                        parallelism (default 4)
+  -t TIMEOUT, --timeout TIMEOUT
+                        timeout of each job
+  -v, --verbose         verbose display (param + line for last output)
+  -n, --nopause         exit at end of run (no pause for keypress)
+  -D DELAY, --delay DELAY
+                        initial delay in seconds between ssh commands (default=0.3s)
+  -f PARAMSFILE, --paramsfile PARAMSFILE
+                        params list file
+  -P PARAM [PARAM ...], --params PARAM [PARAM ...]
+                        hosts list
+  -C {bash,zsh,powershell}, --completion {bash,zsh,powershell}
+                        autocompletion shell code to source
+  -l, --list            list run-para results/log directories
+  -L LOGS [LOGS ...], --logs LOGS [LOGS ...]
+                        get latest/current run-para run logs
+                        -L[&lt;runid&gt;/]*.out          : all hosts outputs
+                        -L[&lt;runid&gt;/]&lt;host&gt;.out     : command output of host
+                        -L[&lt;runid&gt;/]*.&lt;status&gt;     : command output of hosts &lt;status&gt;
+                        -L[&lt;runid&gt;/]*.status       : hosts lists with status
+                        -L[&lt;runid&gt;/]&lt;status&gt;.status: &lt;status&gt; hosts list
+                        -L[&lt;runid&gt;/]params.list     : list of parms used to map command
+                        default &lt;runid&gt; is latest run-para run (use -j &lt;job&gt; -d &lt;dir&gt; to access logs if used for run)
+                        &lt;status&gt;: [success,failed,timeout,killed,aborted]
+</code></pre>
+<p>During run, use :
+* k: to kill command held by a thread
+* p: pause all remaining jobs to be scheduled
+* r: resume scheduling of jobs
+* a: abort all remaining jobs
+* ctrl-c: stop all/exit </p>
+<p>Environment variables:
+* SSHP_SYM_BEG: Symbol character for begin decorative (default: "\ue0b4")
+* SSHP_SYM_END: Symbol character for end decorative (default: "\ue0b6")
+* SSHP_SYM_PROG: Symbol character for progress bar fill (default: "\u25a0")
+* SSHP_SYM_RES: Symbol character before ssh output line (default: "\u25b6")</p>
+<p>Activate autocompletion:
+* <code>. &lt;(run-para -C bash)</code>
+* <code>run-para -C powershell | Out-String | Invoke-Expression</code></p>
 
 
 

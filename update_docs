@@ -1,0 +1,16 @@
+cp ../selector/README.md docs/selector.md
+cp ../complete-ng/README.md docs/complete-ng.md
+cp ../shell-ng/README.md docs/shell-ng.md
+cp ../mkshz/README.md docs/mkshz.md
+cp ../pywebexec/README.md docs/pywebexec.md
+cp ../pywebfs/README.md docs/pywebfs.md
+cp ../fuse-memfs/README.md docs/fuse-memfs.md
+cp ../fuse-sshautofs/README.md docs/fuse-sshautofs.md
+cp ../pgtree/README.md docs/pgtree.md
+cp ../redo/README.md docs/redo.md
+cp ../seedee/README.md docs/seedee.md
+cp ../targpg/README.md docs/targpg.md
+cp ../thefly/README.md docs/thefly.md
+cp ../nerdp/README.md docs/nerdp.md
+cp ../ssh-para/README.md docs/ssh-para.md
+cp ../run-para/README.md docs/run-para.md

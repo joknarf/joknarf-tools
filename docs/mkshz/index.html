@@ -559,6 +559,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Mkshz
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -570,6 +583,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -617,6 +676,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -634,9 +728,104 @@
   
 
 
+<p><a href=""><img alt="bash" src="https://img.shields.io/badge/OS-Linux%20|%20macOS%20|%20SunOS%20...-blue.svg" /></a></p>
 <h1 id="mkshz">mkshz</h1>
-<p>self extracting shell gzip tarball packager.</p>
-<p>GitHub: <a href="https://github.com/joknarf/mkshz">https://github.com/joknarf/mkshz</a></p>
+<p>self extracting shell gzip tarball packager.  </p>
+<blockquote>
+<ul>
+<li>Simple shell script to generate self extracting shell script with embedded gzipped tarball.  </li>
+<li>Minimalist universal packager with pre / post install command without any complex package factory to setup.  </li>
+<li>Simple deployment of application using unique shell script package.</li>
+<li>Alternative to rpm/deb/... factory for simple projects</li>
+</ul>
+</blockquote>
+<h2 id="prerequisites">prerequisites</h2>
+<ul>
+<li>bash</li>
+<li>sed (gnu/bsd)</li>
+<li>tar / gzip</li>
+</ul>
+<h2 id="usage">usage</h2>
+<p>usage: <code>mkshz &lt;file.shz&gt; &lt;dir&gt; [&lt;command&gt; [--tmp-exec] [--pre-extract &lt;command&gt;] &lt;tar options&gt;]</code></p>
+<p>Creates a shell script <code>&lt;file.shz&gt;</code> with embedded tgz archive created from <code>&lt;dir&gt;</code> content.
+* The script will extract the archive to the current directory on execution.
+* A <code>&lt;command&gt;</code> in <code>&lt;dir&gt;</code> can be specified to run after extraction with arguments passed to <code>&lt;file.shz&gt;</code>.
+* A pre-extract <code>&lt;command&gt;</code> in <code>&lt;dir&gt;</code> can be specified to be extracted and run before the whole archive is extracted.
+* if <code>--tmp-exec</code> flag is set the resulting script will extract to /tmp/shz.XXXX executes the commands and clean the /tmp/shz.XXXXX
+* shz_version environment variable can be set to get the version of the archive using <code>v-shz</code> parameter.</p>
+<p>Example usage:</p>
+<pre><code>$ shz_version=v1.2 mkshz install.shz app/ bin/config.sh --pre-extract bin/pre-stop.bash --exclude=.git --exclude=*.o
+</code></pre>
+<p>Notes:
+* The <code>&lt;command&gt;</code> arguments are relative to <code>&lt;dir&gt;</code>.
+* The script generated will be created with a shebang line for bash.
+* The pre-extract <code>&lt;command&gt;</code> will be extracted and executed before extracting whole archive
+* The pre-extract <code>&lt;command&gt;</code> does not receive any arguments.
+* If the pre-extract <code>&lt;command&gt;</code> exit code is not zero, the script will abort whole extraction.</p>
+<h2 id="example">Example</h2>
+<pre><code>$ shz_version=v1.2 mkshz installapp.shz app bin/setup.sh --pre-extract bin/stopapp.sh --exclude=.git
+</code></pre>
+<ul>
+<li>Generated script <code>installapp.shz</code>:</li>
+</ul>
+<pre><code>#!/bin/bash                                                                                                                                                                         
+# Script created with mkshz
+# This script extracts embedded tgz archive 
+# extract archive directory: 'app'
+# pre-extract command: 'app/bin/stopapp.sh'
+# post-extract command: 'app/bin/config.sh'
+# to extract the archive without command execution, use:
+#  ./installapp.shz x-shz
+# shz_verbose=1 env variable can be set to enable tar output
+# shz_target_dir can be set to specify the target directory for extraction
+#
+version=&quot;v1.2&quot;
+dir=&quot;app&quot;
+pre=&quot;app/bin/stopapp.sh&quot;
+cmd=&quot;app/bin/config.sh&quot;
+tmpexec=&quot;1&quot;
+shz=&quot;${0##*/}&quot;
+[ &quot;$shz_verbose&quot; ] &amp;&amp; v=v || v=&quot;&quot;
+[ &quot;$1&quot; = &quot;v-shz&quot; ] &amp;&amp; echo &quot;$version&quot; &amp;&amp; exit 0
+[ &quot;$1&quot; = &quot;x-shz&quot; ] &amp;&amp; cmd=&quot;&quot; pre=&quot;&quot;
+
+[ ! &quot;$shz_target_dir&quot; ] &amp;&amp; [ &quot;$tmpexec&quot; ] &amp;&amp; {
+  shz_target_dir=$(mktemp -d /tmp/shz.XXXXXX) || exit 1
+  [ &quot;$cmd&quot; ] &amp;&amp; trap 'rm -rf &quot;$shz_target_dir&quot;' EXIT
+}
+: ${shz_target_dir:=$PWD}
+
+extract() {
+  sed '1,/^__tgz__/d' &quot;$0&quot;| (cd &quot;$shz_target_dir&quot; &amp;&amp; tar xz${v}f - &quot;$@&quot; &gt;&amp;2) || exit 1
+}
+
+# Pre-extract script:
+[ &quot;$pre&quot; ] &amp;&amp; {
+  echo &quot;$shz: Extracting/Executing pre-extract script: $pre&quot; &gt;&amp;2
+  extract &quot;$pre&quot;
+  &quot;$shz_target_dir/$pre&quot; || { echo &quot;$shz: Error: Failed to execute pre-extract script ($pre)&quot; &gt;&amp;2; exit 1; }
+}
+echo &quot;$shz: Extracting archive directory '$dir' in '$shz_target_dir'&quot; &gt;&amp;2
+extract
+[ &quot;$cmd&quot; ] || exit 0
+cmd=&quot;$shz_target_dir/$cmd&quot;
+echo &quot;$shz: Executing command: $cmd $*&quot; &gt;&amp;2
+[ ! -x &quot;$cmd&quot; ] &amp;&amp; echo &quot;$shz: Error: Command $cmd not found or not executable.&quot; &gt;&amp;2 &amp;&amp; exit 1
+&quot;$cmd&quot; &quot;$@&quot;
+exit $?
+
+__tgz__ ====== binary data starts here ==========================================```
+* script execution
+</code></pre>
+<p>user@host:/myapp/distrib $ ./installapp.shz --register myhost
+installapp.shz: Extracting/Executing pre-extract script: app/bin/stopapp.sh
+  stopapp.sh: Stopping app
+  stopapp.sh: Done
+installapp.shz: Extracting archive directory 'app' in '/myapp/distrib'
+installapp.shz: Executing command: app/bin/setup.sh --register myhost
+  config.sh: Configuring app
+  config.sh: Starting app
+```</p>
 
 
 

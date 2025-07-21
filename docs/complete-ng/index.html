@@ -634,9 +634,98 @@
   
 
 
-<h1 id="complete-ng">Complete-ng</h1>
-<p>Enhanced autocompletion framework with interactive menus and fuzzy matching.</p>
-<p>GitHub: <a href="https://github.com/joknarf/complete-ng">https://github.com/joknarf/complete-ng</a></p>
+<h1 id="complete-ng">complete-ng</h1>
+<p>bash/zsh completion nextgen</p>
+<ul>
+<li>replace bash/zsh completion multiple choices output by interactive selector menu</li>
+<li>browse directories inside the menu</li>
+<li>view/edit files directly from the menu</li>
+<li>single <kbd>tab</kbd> on command line displays choices</li>
+<li>launch menu from empty command line with <kbd>Tab</kbd> to browse files/directories</li>
+</ul>
+<p>for a complete next-gen shell experience, see also this project:
+* <a href="https://github.com/joknarf/shell-ng">joknarf/shell-ng</a>:
+  * auto-transportable dynamic PS1 prompt (you can see it in the demo)
+  * completion nextgen (this plugin)
+  * replacement of shell history command search (<kbd>Ctrl</kbd>+<kbd>R</kbd> or <kbd>Esc</kbd>+<kbd>/</kbd>) with interactive menu
+  *  directory history navigation with arrows + interactive menu</p>
+<h1 id="usage">usage</h1>
+<pre><code>git clone https://github.com/joknarf/complete-ng
+source complete-ng/complete-ng.plugin.bash
+or
+source complete-ng/complete-ng.plugin.zsh
+</code></pre>
+<h2 id="example">example</h2>
+<p><img alt="complete-ng" src="https://github.com/joknarf/complete-ng/assets/10117818/e8993060-4134-4ab5-8a1f-c2ea6d0d5696" /></p>
+<p><img alt="demo" src="https://github.com/joknarf/complete-ng/assets/10117818/44831cb1-ea69-4982-9852-e339a453e803" /></p>
+<h2 id="filefolder-icons">file/folder icons</h2>
+<p>As depending to your terminal font, the icons may not render correctly, you can choose the icons you want using environment variables, here are some sample of dir/file icons, choose the ones fitting your terminal font (use nerd version of your font to have more choice):</p>
+<pre><code>SELECTOR_FOLDER_ICON='' # 🖿 🗀 📁 📂 🖿         
+SELECTOR_FILE_ICON=''   #  🗎            🗋 🖹  
+</code></pre>
+<h2 id="keys-in-menu">keys in menu</h2>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>⇩</kbd></td>
+<td>select next item</td>
+</tr>
+<tr>
+<td><kbd>⇧</kbd></td>
+<td>select prev item</td>
+</tr>
+<tr>
+<td><kbd>End</kbd></td>
+<td>select last item</td>
+</tr>
+<tr>
+<td><kbd>Home</kbd></td>
+<td>select first item</td>
+</tr>
+<tr>
+<td><kbd>⇨</kbd></td>
+<td>browse selected directory</td>
+</tr>
+<tr>
+<td><kbd>⇦</kbd></td>
+<td>browse parent directory</td>
+</tr>
+<tr>
+<td><kbd>F3</kbd></td>
+<td>view file using PAGER (or less)</td>
+</tr>
+<tr>
+<td><kbd>F4</kbd></td>
+<td>edit file usint EDITOR (or vi)</td>
+</tr>
+<tr>
+<td><kbd>Shift</kdb>+<kbd>⇩</kbd>/<kbd>PgUp</kbd>/<kbd>Ctl</kbd>+<kbd>F</kbd></td>
+<td>next page</td>
+</tr>
+<tr>
+<td><kbd>Shift</kdb>+<kbd>⇧</kbd>/<kbd>PgDn</kbd>/<kbd>Ctl</kbd>+<kbd>B</kbd></td>
+<td>previous page</td>
+</tr>
+<tr>
+<td><kbd>Esc</kbd></td>
+<td>exit</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd>+<kbd>A</kbd></td>
+<td>use all screen to display menu</td>
+</tr>
+<tr>
+<td><kbd>Enter</kbd>/<kbd>Tab</kbd></td>
+<td>put selected item on command line</td>
+</tr>
+</tbody>
+</table>
 
 
 

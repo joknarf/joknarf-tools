@@ -295,6 +295,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Seedee
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -306,6 +319,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#keys-when-in-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      keys when in menu
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -617,6 +658,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#keys-when-in-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      keys when in menu
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -634,9 +692,188 @@
   
 
 
-<h1 id="seedee">Seedee</h1>
-<p>Directory jump tool with powerful history tracking and interactive UI.</p>
-<p>GitHub: <a href="https://github.com/joknarf/seedee">https://github.com/joknarf/seedee</a></p>
+<h1 id="seedee">seedee</h1>
+<p>Navigate interactively through directories / history of visited directories using arrow keys from command line.<br />
+Compatibility : bash / ksh / zsh<br />
+(compatible macos / debian / centos / solaris / alpine ...)</p>
+<ul>
+<li>rapidily switch to already visited directories using interactive menu</li>
+<li>use locate (mlocate/plocate) to rapidly cd to any directory</li>
+<li>navigate interactively into directories/history using left/right arrow keys in menu</li>
+<li>directly from command line without any cd command using shift-arrow keys (bash/zsh)</li>
+<li>cd autocompletion with interactive menu (bash)</li>
+</ul>
+<p>for a complete next-gen shell experience, see also these projects:
+* <a href="https://github.com/joknarf/nerdps1">nerdps1</a> : auto-transportable dynamic PS1 prompt (you can see it in the demo)
+* <a href="https://github.com/joknarf/redo">redo</a> : replacement of shell history command search (Ctrl+R or Esc+/) with interactive menu
+* <a href="https://github.com/joknarf/complete-ng">complete-ng</a> : nextgen bash completion with interactive menu</p>
+<p><img alt="demo" src="https://github.com/joknarf/cdhist/assets/10117818/ad3dc445-ba78-401e-9e46-ca87e73fdb3b" /></p>
+<ul>
+<li>using bash/zsh in emacs or vi mode, key binding is available as shortcuts:</li>
+<li>default key binding with <kbd>Shift</kbd>+<kbd>Arrows</kbd> or <kbd>Ctrl</kbd>+<kbd>Arrows</kbd> (can be overridden using CD*BIND variables)</li>
+</ul>
+<div align="center">
+
+|Left                     | Up/Down                             | Right                       |
+|:-----------------------:|:-----------------------------------:|:---------------------------:|
+|                         |  previous dir in history            |                             |
+|                         | <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/10ac2573-49fc-4ed5-8a6e-cce931c55ae2">| |
+| <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/015131c5-8d8d-4c0d-8d44-a876fa6f2fb5"> |  <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/fe034fdc-dea5-49fa-be30-8f0bd9341208"> | <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/1d254f15-050e-4ff9-9f5d-002e9ff4802f"> |
+|  parent dir (..)         | dir history browser                | dir browser                 |
+
+directory pattern can be put on command line before hitting shortcut to filter result  
+putting on command line : `work` and hitting <kbd>Shift</kbd>+<kbd>⇧</kbd> will bring you to last visited directory containing `work`
+
+|key                                           | action                                               |
+|----------------------------------------------|------------------------------------------------------|
+|<kbd>Shift</kbd>+<kbd>⇩</kbd>                 | cd history menu                                      |
+|<kbd>Shift</kbd>+<kbd>⇧</kbd>                 | return to last directory in history matching pattern |
+|<kbd>Shift</kbd>+<kbd>⇨</kbd>                 | navigate from current directory                      |
+|<kbd>Shift</kbd>+<kbd>⇦</kbd>                 | go to parent dir (cd ..)                             |
+|<kbd>Ctrl</kbd>+<kbd>Shift</kbd><kbd>⇩</kbd>  | search directories matching pattern in locate db     |
+
+</div>
+
+<ul>
+<li>using bash, <code>&lt;tab&gt;</code> cd auto completion can be enabled for <code>cd</code> command:</li>
+<li>setting env variable <code>CDCOMPLETE=y</code> before sourcing <code>seedee</code></li>
+</ul>
+<h2 id="keys-when-in-menu">keys when in menu</h2>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>⇩</kbd></td>
+<td>select next item</td>
+</tr>
+<tr>
+<td><kbd>⇧</kbd></td>
+<td>select prev item</td>
+</tr>
+<tr>
+<td><kbd>End</kbd></td>
+<td>select last item</td>
+</tr>
+<tr>
+<td><kbd>Home</kbd></td>
+<td>select first item</td>
+</tr>
+<tr>
+<td><kbd>⇨</kbd></td>
+<td>browse selected directory</td>
+</tr>
+<tr>
+<td><kbd>⇦</kbd></td>
+<td>browse parent directory</td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd>+<kbd>⇨</kbd></td>
+<td>browse selected directory with subdirectories depth 4</td>
+</tr>
+<tr>
+<td><kbd>Shift</kbd>+<kbd>⇦</kbd></td>
+<td>back to only show subdirectories depth 1</td>
+</tr>
+<tr>
+<td><kbd>Shift</kdb>+<kbd>⇩</kbd>/<kbd>PgUp</kbd>/<kbd>Ctl</kbd>+<kbd>F</kbd></td>
+<td>next page</td>
+</tr>
+<tr>
+<td><kbd>Shift</kdb>+<kbd>⇧</kbd>/<kbd>PgDn</kbd>/<kbd>Ctl</kbd>+<kbd>B</kbd></td>
+<td>previous page</td>
+</tr>
+<tr>
+<td><kbd>Del</kbd>/<kbd>F8</kbd></td>
+<td>delete directory entry in history</td>
+</tr>
+<tr>
+<td><kbd>Esc</kbd></td>
+<td>exit</td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd>+<kbd>A</kbd></td>
+<td>use all screen to display menu</td>
+</tr>
+<tr>
+<td><kbd>Enter</kbd>/<kbd>Tab</kbd></td>
+<td>go to directory</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>filter pattern can be applied entering text</li>
+<li>selection can be done entering item number</li>
+</ul>
+<h1 id="usage">usage</h1>
+<pre><code>$ . ./seedee
+$ cd &lt;dir&gt;
+=&gt; change to &lt;dir&gt; and add &lt;dir&gt; to $CDHISTFILE
+$ cd --
+=&gt; display current history / choose dir to change
+$ cd -- &lt;pat&gt;...
+=&gt; search pattern &lt;pat&gt; in current history, change to dir if unique, display / chose dir either
+$ cd - &lt;pat&gt;...
+=&gt; search pattern &lt;pat&gt; in cd history, change to dir first matched
+$ cd + [&lt;pat&gt;]...
+=&gt; display immediate subdirectories of cwd, search / choose dir to change (except dot dirs, like .git/*)
+$ cd ++ [&lt;pat&gt;]...
+=&gt; display subdirectories until depth 4, search / choose dir to change (except dot dirs, like .git/*)
+$ cdl &lt;pat&gt;...
+=&gt; use locate -r and get list of directories to switch
+</code></pre>
+<p><code>cd - &lt;opts&gt;</code> <code>cd -- &lt;opts&gt;</code> <code>cd + &lt;opts&gt;</code> <code>cd ++ &lt;opts&gt;</code> are aliases to <code>cd- cd-- cd+ cd++</code></p>
+<h1 id="environment-variables">environment variables</h1>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CDHISTFILE</code></td>
+<td>path to history file (default to ~/.cd_history)</td>
+</tr>
+<tr>
+<td><code>CDNBDIRS</code></td>
+<td>Number of directories in history to display (default 10)</td>
+</tr>
+<tr>
+<td><code>CDINITDIRS</code></td>
+<td>Directory list (\n separated) to initialize CDHISTFILE if empty</td>
+</tr>
+<tr>
+<td><code>CDPOWERLINE</code></td>
+<td>set to "n" to disable powerline symbol usage</td>
+</tr>
+<tr>
+<td><code>CDHISTBIND</code></td>
+<td>bind key to cdhist</td>
+</tr>
+<tr>
+<td><code>CDDOTBIND</code></td>
+<td>bind key to navigate from current dir</td>
+</tr>
+<tr>
+<td><code>CDLBIND</code></td>
+<td>bind key to cdlocate</td>
+</tr>
+<tr>
+<td><code>CDUPIND</code></td>
+<td>bind key to cd ..</td>
+</tr>
+<tr>
+<td><code>CDLASTBIND</code></td>
+<td>bind key to cdhist last dir matching text</td>
+</tr>
+</tbody>
+</table>
 
 
 

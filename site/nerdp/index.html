@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nerpd" class="md-skip">
+        <a href="#nerdp" class="md-skip">
           Skip to content
         </a>
       
@@ -383,6 +383,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Nerdp
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -394,6 +407,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#font-for-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font for prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choose-your-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      choose your style
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#font-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font rendering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customizing prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-theme-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      color theme example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -617,6 +703,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#font-for-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font for prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choose-your-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      choose your style
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#font-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font rendering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customizing prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-theme-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      color theme example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -634,9 +782,95 @@
   
 
 
-<h1 id="nerpd">nerpd</h1>
-<p>Nerd prompt for bash/ksh/zsh (mksh/ash)</p>
-<p>GitHub: <a href="https://github.com/joknarf/nerdp">https://github.com/joknarf/nerdp</a></p>
+<h1 id="nerdp">nerdp</h1>
+<p>Nerd prompt for bash/ksh/zsh (mksh/ash)<br />
+Light version of <a href="https://github.com/joknarf/nerdps1">nerdps1</a> local nerd prompt w/o psudo/pssh (as <a href="https://github.com/joknarf/thefly">thefly</a> is doing plugin teleportation)</p>
+<h2 id="font-for-prompt">Font for prompt</h2>
+<p>For better experience, install a Nerd font on your system/console (Windows console / Windows terminal / putty / git-bash / CmdEr / iTerm2 / Terminator / MobaXterm / VScode terminal / Pycharm terminal...):<br />
+<a href="https://github.com/wclr/my-nerd-fonts/raw/master/Consolas%20NF/Consolas%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf">Consolas NF</a><br />
+<a href="https://www.nerdfonts.com/">Nerd Fonts</a></p>
+<p>on Unix, copy to <code>~/.fonts</code> and run <code>fc-cache -fv</code> then relaunch your terminal and set the font</p>
+<h2 id="installation">Installation</h2>
+<ul>
+<li>
+<p>You can install using a plugin manager like sheldon / zgenom ... : plugin joknarf/nerdp</p>
+</li>
+<li>
+<p>Or you can activate the nerdp prompt directly using:<br />
+<code>$ . &lt;(curl -s https://raw.githubusercontent.com/joknarf/nerdp/main/nerdp)</code></p>
+</li>
+<li>Or you can get your local copy using:<br />
+<code>$ curl -sL -o ~/nerdp https://raw.githubusercontent.com/joknarf/nerdp/main/nerdp</code><br />
+then source it in your profile/rcfile:<br />
+<code>. ~/nerdp</code></li>
+</ul>
+<p><img width="900" alt="image" src="https://github.com/joknarf/nerdps1/assets/10117818/ebc3f680-69b1-45d2-b1ce-b09b09b545f2"></p>
+<p>Following information displayed:
+* exit code if command returns code is not 0
+* elapse time during command if command lasts more than 1s (bash / zsh / ksh &gt;2012)
+* user@hostname
+* current working directory
+* git branch if in git directory (colorized according to git status)
+* python VIRTUAL_ENV and other variables values with name in <code>ps1_info</code> variable
+* filesystem usage check of <code>ps1_fslist</code> (default "/ /tmp") according to <code>ps1_fslimits</code> (default "95 100")
+* 1min cpu load (colorized default <code>ps1_loadlimits</code> "10 20")
+* Available memory (colorized default <code>ps1_memlimits</code> "300 100" MB)
+* Time</p>
+<h2 id="choose-your-style">choose your style</h2>
+<p>set <code>ps1_style</code> variable to available styles in your .nerdrc<br />
+You can test using <code>ps1_style</code> function:</p>
+<p><img alt="image" src="https://github.com/joknarf/nerdps1/assets/10117818/f8d32297-73f4-4827-9802-b635c9d9a481" /></p>
+<h2 id="font-rendering">Font rendering</h2>
+<p>If your terminal does not manage correctly nerd font symbols, you may switch to more commonly supported powerline font symbols, or even disable the segment separator symbols.<br />
+You can use : <code>ps1_display</code> function/var to switch prompt display symbol characters:</p>
+<pre><code>$ ps1_display -h
+usage: ps1_display &lt;option&gt;
+    &lt;option&gt;: nerdicons, nerd, powerline, nofont, ascii
+</code></pre>
+<h2 id="customizing-prompt">Customizing prompt</h2>
+<p>You can add informations on the prompt using ps1_info variable:<br />
+* <code>ps1_info="MYVAR MYVAR2..."</code> : will display content of variables
+* <code>ps1_info="(myfunc) (myfunc2)"</code> : will display output of functions myfunc myfunc2</p>
+<p>You can add custom colorized segment defining <code>ps1_addon()</code> function:
+* <code>ps1_addon() { pgrep rsyslogd &gt;/dev/null || echo 'red:syslog'; }</code>
+output format of function:
+  <code>&lt;bgcolor&gt;[/&lt;fgcolor&gt;/&lt;sepcolor&gt;]:&lt;message&gt;[|message]</code>
+empty output discards the segment.</p>
+<p>Changing prompt powerline, ps1_powerline variable represents the prompt:<br />
+*  segment setting : <code>symbol/bgcolor/fgcolor/sepcolor:function</code>
+    * function called is <code>ps1_function</code> (ps1_ prefixed)
+    * colors : <code>black red green yellow blue magenta cyan white</code>, prefix <code>l</code> for light color
+    * symbols : <code>&lt; &gt; ( )</code>
+    * when color is set to auto, the function output must be <code>&lt;color&gt;:&lt;text&gt;</code> else only <code>&lt;text&gt;</code>
+* right alignment separator : <code>|</code>
+* <code>ps1_powerline="(/auto:exit_status (/blue:userhost )/auto:git_branch )/lblack:cwd &gt; | (/lblue/black/blue:info (/auto:freemem (/blue:time )"</code>
+<img alt="image" src="https://github.com/joknarf/nerdps1/assets/10117818/54fa6b66-03b5-4b04-8920-a461efcd9ca4" />
+* <code>ps1_powerline="auto:exit_status blue:userhost &gt;/auto:git_branch &gt;/lblack:cwd &gt; | &lt;/lblue/black/blue:info &lt;/auto:freemem &lt;/blue:time"</code>
+<img alt="image" src="https://github.com/joknarf/nerdps1/assets/10117818/f5d3bc4e-cf65-4889-af5b-817445575ef7" /></p>
+<h2 id="color-theme-example">color theme example</h2>
+<p>used terminal colors in example:</p>
+<pre><code class="language-json">        {
+            &quot;name&quot;: &quot;NerdPS1&quot;,
+            &quot;background&quot;: &quot;#000000&quot;,
+            &quot;foreground&quot;: &quot;#D3D7CF&quot;,
+            &quot;black&quot;: &quot;#000000&quot;,
+            &quot;blue&quot;: &quot;#2760AA&quot;,
+            &quot;cyan&quot;: &quot;#06989A&quot;,
+            &quot;green&quot;: &quot;#088A5B&quot;,
+            &quot;purple&quot;: &quot;#4c3d80&quot;,
+            &quot;red&quot;: &quot;#BA1611&quot;,
+            &quot;white&quot;: &quot;#D3D7CF&quot;,
+            &quot;yellow&quot;: &quot;#CF8700&quot;,
+            &quot;brightBlack&quot;: &quot;#243C4F&quot;,
+            &quot;brightBlue&quot;: &quot;#729FCF&quot;,
+            &quot;brightCyan&quot;: &quot;#34E2E2&quot;,
+            &quot;brightGreen&quot;: &quot;#59c566&quot;,
+            &quot;brightPurple&quot;: &quot;#AD7FA8&quot;,
+            &quot;brightRed&quot;: &quot;#EF2929&quot;,
+            &quot;brightWhite&quot;: &quot;#EEEEEC&quot;,
+            &quot;brightYellow&quot;: &quot;#FCE94F&quot;
+        }
+</code></pre>
 
 
 

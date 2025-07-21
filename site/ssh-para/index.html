@@ -634,9 +634,129 @@
   
 
 
-<h1 id="ssh-para">Ssh-para</h1>
-<p>Parallel SSH command runner with live output and interactive view.</p>
-<p>GitHub: <a href="https://github.com/joknarf/ssh-para">https://github.com/joknarf/ssh-para</a></p>
+<p><a href="https://pypi.org/project/ssh-para/"><img alt="Pypi version" src="https://img.shields.io/pypi/v/ssh-para.svg" /></a>
+<img alt="example" src="https://github.com/joknarf/ssh-para/actions/workflows/python-publish.yml/badge.svg" />
+<a href="https://shields.io/"><img alt="Licence" src="https://img.shields.io/badge/licence-MIT-blue.svg" /></a>
+<a href="https://pepy.tech/project/ssh-para"><img alt="" src="https://pepy.tech/badge/ssh-para" /></a>
+<a href="https://shields.io/"><img alt="Python versions" src="https://img.shields.io/badge/python-3.6+-blue.svg" /></a></p>
+<h1 id="ssh-para">ssh-para</h1>
+<p>Parallel SSH jobs manager CLI (alternative to parallel-ssh)
+* POSIX/Linux/MacOS/Windows compatible (with openssh client installed)
+* Launch parallel ssh jobs/scripts on remote hosts, with interactive display of the running commands outputs
+* Keep all output in log files
+* Interactive pause/resume/abort jobs, kill stuck ssh connection interactively.</p>
+<p><img alt="ssh-para3" src="https://github.com/joknarf/ssh-para/assets/10117818/aef84de2-d15c-44f6-b6ff-74dc5f6f7b08" /></p>
+<h1 id="installation">installation</h1>
+<pre><code class="language-shell">pip install ssh-para
+</code></pre>
+<p>By default, <code>ssh-para</code> uses Nerd Fonts glyphs, modern terminals can now render the glyphs without installing specific font (the symbols can be overridden with SSHP_SYM_* environment variables, see below)</p>
+<h1 id="quick-start">quick start</h1>
+<pre><code>Run command on multiple hosts:
+$ ssh-para -H host1 host2 host3 -- echo connection ok
+Review last run results:
+$ ssh-para -l
+Review hosts statuses for last run:
+$ ssh-para -L *.status
+View failed hosts list:
+$ ssh-para -L failed.status
+Show output of command on all hosts:
+$ ssh-para -L *.out
+Show output of command for failed hosts:
+$ ssh-para -L *.failed
+Show output of command for host1:
+$ ssh-para -L host1.out
+</code></pre>
+<h1 id="usage">usage</h1>
+<pre><code>ssh-para -h
+</code></pre>
+<pre><code>usage: ssh-para [-h] [-V] [-j JOB] [-d DIRLOG] [-m MAXDOTS] [-p PARALLEL] [-t TIMEOUT] [-r] [-v] [-D DELAY]
+                [-f HOSTSFILE | -H HOSTS [HOSTS ...] | -C {bash,zsh,powershell} | -l | -L LOGS [LOGS ...]] [-s SCRIPT]
+                [-a ARGS [ARGS ...]]
+                [ssh_args ...]
+
+ssh-para v1.ssh-para.dev
+
+positional arguments:
+  ssh_args
+
+options:
+  -h, --help            show this help message and exit
+  -V, --version         ssh-para version
+  -j JOB, --job JOB     Job name added subdir to dirlog
+  -d DIRLOG, --dirlog DIRLOG
+                        directory for ouput log files (default: ~/.ssh-para)
+  -m MAXDOTS, --maxdots MAXDOTS
+                        hostname domain displaylevel (default:1 =&gt; short hostname, -1 =&gt; fqdn)
+  -p PARALLEL, --parallel PARALLEL
+                        parallelism (default 4)
+  -t TIMEOUT, --timeout TIMEOUT
+                        timeout of each job
+  -r, --resolve         resolve fqdn in SSHP_DOMAINS
+  -v, --verbose         verbose display (fqdn + line for last output)
+  -D DELAY, --delay DELAY
+                        initial delay in seconds between ssh commands (default=0.3s)
+  -f HOSTSFILE, --hostsfile HOSTSFILE
+                        hosts list file
+  -H HOSTS [HOSTS ...], --hosts HOSTS [HOSTS ...]
+                        hosts list
+  -C {bash,zsh,powershell}, --completion {bash,zsh,powershell}
+                        autocompletion shell code to source
+  -l, --list            list ssh-para results/log directories
+  -L LOGS [LOGS ...], --logs LOGS [LOGS ...]
+                        get latest/current ssh-para run logs
+                        -L[&lt;runid&gt;/]*.out          : all hosts outputs
+                        -L[&lt;runid&gt;/]&lt;host&gt;.out     : command output of host
+                        -L[&lt;runid&gt;/]*.&lt;status&gt;     : command output of hosts &lt;status&gt;
+                        -L[&lt;runid&gt;/]*.status       : hosts lists with status
+                        -L[&lt;runid&gt;/]&lt;status&gt;.status: &lt;status&gt; hosts list
+                        -L[&lt;runid&gt;/]hosts.list     : list of hosts used to connect (resolved if -r)
+                        default &lt;runid&gt; is latest ssh-para run (use -j &lt;job&gt; -d &lt;dir&gt; to access logs if used for run)
+                        &lt;status&gt;: [success,failed,timeout,killed,aborted]
+  -s SCRIPT, --script SCRIPT
+                        script to execute
+  -a ARGS [ARGS ...], --args ARGS [ARGS ...]
+                        script arguments
+</code></pre>
+<p>During run, use :
+* k: to kill ssh command held by a thread (but remote command can still be running on remote host)
+* p: pause all remaining jobs to be scheduled
+* r: resume scheduling of jobs
+* a: abort all remaining jobs
+* ctrl-c: stop all/exit (but remote commands launched by ssh can still be running on remote servers)</p>
+<p>Environment variables:
+* SSHP_OPTS: ssh default options (Eg: "-F /home/user/.ssh/myconfig")
+* SSHP_DOMAINS: dns domains to search when short hostname given (with -r/--resolve option)
+* SSHP_SYM_BEG: Symbol character for begin decorative (default: "\ue0b4")
+* SSHP_SYM_END: Symbol character for end decorative (default: "\ue0b6")
+* SSHP_SYM_PROG: Symbol character for progress bar fill (default: "\u25a0")
+* SSHP_SYM_RES: Symbol character before ssh output line (default: "\u25b6")</p>
+<p>Activate autocompletion:
+* <code>. &lt;(ssh-para -C bash)</code>
+* <code>ssh-para -C powershell | Out-String | Invoke-Expression</code></p>
+<h1 id="example">Example</h1>
+<p>Patch redhat family hosts:</p>
+<pre><code class="language-shell">ssh-para -p 20 -f hostlist.txt -- 'sudo yum update -y;sudo shutdown -r +1'
+</code></pre>
+<p>Use specific ssh options / config (everything after <code>--</code> will be passed to ssh command as is):</p>
+<pre><code class="language-shell">ssh-para -p 20 -H host1 host2 -- -F ~/.ssh/myconfig echo connect ok
+</code></pre>
+<p>Launch local script with argument on remote hosts:</p>
+<pre><code class="language-shell">ssh-para -p 20 -f hosts.txt -s ./myscript -a status
+</code></pre>
+<p>Extend limited resolv.conf search domains (try to resolve host in each domain, first resolved in the domain list is used as fqdn):</p>
+<pre><code class="language-shell">SSHP_DOMAINS=&quot;domain1.com domain2.com&quot; ssh-para -r -H host1 host2 -- echo connect ok
+</code></pre>
+<h1 id="tips">Tips</h1>
+<ul>
+<li>ssh-para uses ssh BatchMode, no interactive password/passphrase will be asked, so you need to have a ssh authorized key to connect to servers (ssh-agent...)</li>
+<li>you need to configure your ssh for StrictHostKeyChecking/UserKnownHostsFile if you need to connect to unknown servers</li>
+<li>to connect as different user use ssh -l option or define everything in your ssh config file</li>
+<li><em>you can use user@host as hostname but not if you need to resolve host (-r/--resolve)</em></li>
+<li>if you are using ssh ProxyJump server to reach hosts, you may need to tweak the sshd MaxStartups setting on the ssh Proxy server with high parallelism</li>
+<li><em>when ssh-para starts, a delay of 0.3 seconds is applied between threads starting ssh jobs to avoid flooding, (can be tweaked with -D <delay>)</em></li>
+<li>if you are using remote connexion to launch the ssh-para, use <code>screen</code> to launch ssh-para, as if you lose your connection, ssh-para will be still running and you can re-attach to <code>screen</code> to continue follow-up.</li>
+<li>Be very carefull when launching massive commands on servers... Always first test on non production.</li>
+</ul>
 
 
 

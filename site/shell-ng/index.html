@@ -635,8 +635,30 @@
 
 
 <h1 id="shell-ng">shell-ng</h1>
-<p>joknarf optimized shell plugin compilation (redo/seede/nerdp/complete-ng)</p>
-<p>GitHub: <a href="https://github.com/joknarf/shell-ng">https://github.com/joknarf/shell-ng</a></p>
+<p>Shell next-gen plugin, the new shell experience (for bash/zsh/ksh) in native shell.</p>
+<p>All-in-one plugin optimized with joknarf shell command line customizations, includes:
+| Plugin                                                | Short description                                       | Basic key binding                     |
+|-------------------------------------------------------|---------------------------------------------------------|---------------------------------------|
+| <a href="https://github.com/joknarf/selector">selector</a>       | Interactive menu used in joknarf plugins (bash/zsh/ksh) |                                       |
+| <a href="https://github.com/joknarf/nerdp">nerp</a>              | Nerd shell prompt (bash/zsh/ksh)                        |                                       |
+| <a href="https://github.com/joknarf/redo">redo</a>               | Command history interactive menu (bash/zsh)             | <kbd>Shit</kbd>-<kbd>Tab</kbd>        |
+| <a href="https://github.com/joknarf/seedee">seedee</a>           | Directory history interactive menu (bash/zsh/ksh)       | <kbd>Shift</kbd>-<kbd>ArrowDown</kbd> |
+| <a href="https://github.com/joknarf/complete-ng">complete-ng</a> | Auto-completion interactive menu (bash/zsh)             | <kbd>Tab</kbd>                        |</p>
+<h1 id="pre-requisites">Pre-requisites</h1>
+<ul>
+<li>shell-ng is using Nerd Font glyphs, you should install Nerd font on your favorite terminal manager, or it should manage Nerd glyphs</li>
+<li>Basic standard gnu utilities (sed/awk/grep)</li>
+</ul>
+<h1 id="usage">Usage</h1>
+<p>Use a plugin manager or manually source the plugin for your shell.</p>
+<pre><code># source shell-ng.plugin.${SHELL##*/}
+</code></pre>
+<p>Can be easily used with <a href="https://github.com/joknarf/thefly">thefly</a> plugin manager/teleporter:</p>
+<pre><code># fly add joknarf/shell-ng
+</code></pre>
+<p>thefly will allow to keep all your plugins available when connecting to remote servers through ssh, and even changing shell and user with sudo.</p>
+<h1 id="demo">Demo</h1>
+<p><img alt="shell-ng3" src="https://github.com/user-attachments/assets/431d6d71-0d0a-4fbc-bcb8-738cb1832880" /></p>
 
 
 
