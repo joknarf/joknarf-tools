@@ -16,13 +16,13 @@ Parallel SSH jobs manager CLI (alternative to parallel-ssh)
 ![ssh-para3](https://github.com/joknarf/ssh-para/assets/10117818/aef84de2-d15c-44f6-b6ff-74dc5f6f7b08)
 
 
-# installation
+## installation
 ```shell
 pip install ssh-para
 ```
 By default, `ssh-para` uses Nerd Fonts glyphs, modern terminals can now render the glyphs without installing specific font (the symbols can be overridden with SSHP_SYM_* environment variables, see below)
 
-# quick start
+## quick start
 
 ```
 Run command on multiple hosts:
@@ -41,7 +41,7 @@ Show output of command for host1:
 $ ssh-para -L host1.out
 ```
 
-# usage
+## usage
 ```
 ssh-para -h
 ```
@@ -113,7 +113,7 @@ Activate autocompletion:
 * `. <(ssh-para -C bash)`
 * `ssh-para -C powershell | Out-String | Invoke-Expression`
 
-# Example
+## Example
 
 Patch redhat family hosts:
 ```shell
@@ -132,7 +132,7 @@ Extend limited resolv.conf search domains (try to resolve host in each domain, f
 SSHP_DOMAINS="domain1.com domain2.com" ssh-para -r -H host1 host2 -- echo connect ok
 ```
 
-# Tips
+## Tips
 
 * ssh-para uses ssh BatchMode, no interactive password/passphrase will be asked, so you need to have a ssh authorized key to connect to servers (ssh-agent...)
 * you need to configure your ssh for StrictHostKeyChecking/UserKnownHostsFile if you need to connect to unknown servers

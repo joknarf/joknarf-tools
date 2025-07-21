@@ -449,6 +449,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Run-para
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -460,6 +473,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      quick start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#params-mapping-to-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      params mapping to command
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      usage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -617,6 +685,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      quick start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#params-mapping-to-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      params mapping to command
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      usage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -647,11 +759,11 @@
 * Interactive pause/resume/abort jobs, kill stuck command interactively.</p>
 <p>Take a look at <a href="https://github.com/joknarf/ssh-para">ssh-para</a> if you need parallel ssh jobs to multiple servers</p>
 <p><img alt="run-para" src="https://github.com/user-attachments/assets/536424fd-20de-4512-a28f-9971d3e3311d" /></p>
-<h1 id="installation">installation</h1>
+<h2 id="installation">installation</h2>
 <pre><code class="language-shell">pip install run-para
 </code></pre>
 <p>By default, <code>run-para</code> uses Nerd Fonts glyphs, modern terminals can now render the glyphs without installing specific font (the symbols can be overridden with SSHP_SYM_* environment variables, see below)</p>
-<h1 id="quick-start">quick start</h1>
+<h2 id="quick-start">quick start</h2>
 <pre><code>Run parallel commands:
 $ run-para -P host1 host2 host3 -- ssh -n @1 &quot;echo @1 is reachable&quot;
 Review last run results:
@@ -667,7 +779,7 @@ $ run-para -L *.failed
 Show output of command for host1:
 $ run-para -L host1.out
 </code></pre>
-<h1 id="params-mapping-to-command">params mapping to command</h1>
+<h2 id="params-mapping-to-command">params mapping to command</h2>
 <p>run-para will match parameters to the command according to <code>@x</code> mapping.<br />
 using -P options, can only pass 1 parameter to command<br />
 using -f paramsfile, can pass multiple parameters  </p>
@@ -687,7 +799,7 @@ server2 &quot;the file2.zip&quot;
 <pre><code class="language-shell">curl -OL &quot;http://server1/download/the file1.zip&quot;
 curl -OL &quot;http://server2/download/the file2.zip&quot;
 </code></pre>
-<h1 id="usage">usage</h1>
+<h2 id="usage">usage</h2>
 <pre><code>run-para -h
 </code></pre>
 <pre><code>usage: run-para [-h] [-V] [-j JOB] [-d DIRLOG] [-p PARALLEL] [-t TIMEOUT] [-v] [-D DELAY]
