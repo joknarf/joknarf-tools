@@ -827,15 +827,19 @@ $ source redo/redo
 <h2 id="delete-history-commands">delete history commands</h2>
 <p>To delete command from current shell history and <code>$HISTFILE</code> use <code>redodel</code> command then chose command and press <kbd>Del</kbd> or <kbd>F8</kbd>.  </p>
 <p>Using <kbd>Del</kbd>/<kbd>F8</kbd> when using redo bind key (<kbd>Esc</kbd>+<kbd>/</kbd> or <kbd>Ctl</kbd>+<kbd>R</kbd>) will not remove command from current shell history (line editing limitation), but the <code>$HISTFILE</code> will be purged from the command.  </p>
-<p>When deleting history in <code>$HISTFILE</code> using redo bind key, set the following options to ensure the history is not written later in <code>$HISTFILE</code> by shell.
-* zsh options to set :
+<p>When deleting history in <code>$HISTFILE</code> using redo bind key, set the following options to ensure the history is not written later in <code>$HISTFILE</code> by shell.</p>
+<ul>
+<li>
+<p>zsh options to set :
   <code>zsh
   setopt appendhistory
   setopt incappendhistory</code></p>
-<ul>
-<li>bash options to set :
+</li>
+<li>
+<p>bash options to set :
   <code>shopt -s histappend cmdlist
-  PROMPT_COMMAND='history -a'</code></li>
+  PROMPT_COMMAND='history -a'</code></p>
+</li>
 </ul>
 <h2 id="limitations">limitations</h2>
 <ul>
