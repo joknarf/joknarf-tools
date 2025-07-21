@@ -23,7 +23,7 @@ for a complete next-gen shell experience, see also these projects:
 <div align="center">
  
 |Left                     | Up/Down                             | Right                       |
-|:-----------------------:|:-----------------------------------:|:---------------------------:|
+|-------------------------|-------------------------------------|-----------------------------|
 |                         |  previous dir in history            |                             |
 |                         | <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/10ac2573-49fc-4ed5-8a6e-cce931c55ae2">| |
 | <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/015131c5-8d8d-4c0d-8d44-a876fa6f2fb5"> |  <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/fe034fdc-dea5-49fa-be30-8f0bd9341208"> | <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/1d254f15-050e-4ff9-9f5d-002e9ff4802f"> |
