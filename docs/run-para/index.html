@@ -845,20 +845,26 @@ options:
                         default &lt;runid&gt; is latest run-para run (use -j &lt;job&gt; -d &lt;dir&gt; to access logs if used for run)
                         &lt;status&gt;: [success,failed,timeout,killed,aborted]
 </code></pre>
-<p>During run, use :
-* k: to kill command held by a thread
-* p: pause all remaining jobs to be scheduled
-* r: resume scheduling of jobs
-* a: abort all remaining jobs
-* ctrl-c: stop all/exit </p>
-<p>Environment variables:
-* SSHP_SYM_BEG: Symbol character for begin decorative (default: "\ue0b4")
-* SSHP_SYM_END: Symbol character for end decorative (default: "\ue0b6")
-* SSHP_SYM_PROG: Symbol character for progress bar fill (default: "\u25a0")
-* SSHP_SYM_RES: Symbol character before ssh output line (default: "\u25b6")</p>
-<p>Activate autocompletion:
-* <code>. &lt;(run-para -C bash)</code>
-* <code>run-para -C powershell | Out-String | Invoke-Expression</code></p>
+<p>During run, use :</p>
+<ul>
+<li>k: to kill command held by a thread</li>
+<li>p: pause all remaining jobs to be scheduled</li>
+<li>r: resume scheduling of jobs</li>
+<li>a: abort all remaining jobs</li>
+<li>ctrl-c: stop all/exit </li>
+</ul>
+<p>Environment variables:</p>
+<ul>
+<li>SSHP_SYM_BEG: Symbol character for begin decorative (default: "\ue0b4")</li>
+<li>SSHP_SYM_END: Symbol character for end decorative (default: "\ue0b6")</li>
+<li>SSHP_SYM_PROG: Symbol character for progress bar fill (default: "\u25a0")</li>
+<li>SSHP_SYM_RES: Symbol character before ssh output line (default: "\u25b6")</li>
+</ul>
+<p>Activate autocompletion:</p>
+<ul>
+<li><code>. &lt;(run-para -C bash)</code></li>
+<li><code>run-para -C powershell | Out-String | Invoke-Expression</code></li>
+</ul>
 
 
 
