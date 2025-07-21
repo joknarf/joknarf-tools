@@ -14,6 +14,7 @@ $ source <(curl -Ls https://raw.githubusercontent.com/joknarf/redo/main/redo)
 ```
 
 Then on command line:  
+
 * <kbd>Shift</kbd><kbd>Tab</kbd> or <kbd>Esc</kbd>+<kbd>/</kbd> or <kbd>Ctl</kbd><kbd>R</kbd> to access history menu
 * you can put pattern on command line + <kbd>Shift</kbd><kbd>Tab</kbd> or <kbd>Esc</kbd>+<kbd>/</kbd> or <kbd>Ctl</kbd>+<kbd>R</kbd> to filter and access history menu
 * in menu enter pattern to filter/re-filter history
