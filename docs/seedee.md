@@ -20,10 +20,9 @@ for a complete next-gen shell experience, see also these projects:
 * using bash/zsh in emacs or vi mode, key binding is available as shortcuts:
   * default key binding with <kbd>Shift</kbd>+<kbd>Arrows</kbd> or <kbd>Ctrl</kbd>+<kbd>Arrows</kbd> (can be overridden using CD*BIND variables)
 
-<div align="center">
  
-|Left                     | Up/Down                             | Right                       |
-|-------------------------|-------------------------------------|-----------------------------|
+| Left                    | Up/Down                             | Right                       |
+|:-----------------------:|:-----------------------------------:|:---------------------------:|
 |                         |  previous dir in history            |                             |
 |                         | <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/10ac2573-49fc-4ed5-8a6e-cce931c55ae2">| |
 | <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/015131c5-8d8d-4c0d-8d44-a876fa6f2fb5"> |  <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/fe034fdc-dea5-49fa-be30-8f0bd9341208"> | <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/1d254f15-050e-4ff9-9f5d-002e9ff4802f"> |
@@ -32,7 +31,7 @@ for a complete next-gen shell experience, see also these projects:
 directory pattern can be put on command line before hitting shortcut to filter result  
 putting on command line : `work` and hitting <kbd>Shift</kbd>+<kbd>⇧</kbd> will bring you to last visited directory containing `work`
 
-|key                                           | action                                               |
+| key                                          | action                                               |
 |----------------------------------------------|------------------------------------------------------|
 |<kbd>Shift</kbd>+<kbd>⇩</kbd>                 | cd history menu                                      |
 |<kbd>Shift</kbd>+<kbd>⇧</kbd>                 | return to last directory in history matching pattern |
@@ -40,7 +39,6 @@ putting on command line : `work` and hitting <kbd>Shift</kbd>+<kbd>⇧</kbd> wil
 |<kbd>Shift</kbd>+<kbd>⇦</kbd>                 | go to parent dir (cd ..)                             |
 |<kbd>Ctrl</kbd>+<kbd>Shift</kbd><kbd>⇩</kbd>  | search directories matching pattern in locate db     |
 
-</div>
 
 * using bash, `<tab>` cd auto completion can be enabled for `cd` command:
   * setting env variable `CDCOMPLETE=y` before sourcing `seedee`
