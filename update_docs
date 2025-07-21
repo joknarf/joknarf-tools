@@ -8,7 +8,7 @@ cp ../fuse-memfs/README.md docs/fuse-memfs.md
 cp ../fuse-sshautofs/README.md docs/fuse-sshautofs.md
 cp ../pgtree/README.md docs/pgtree.md
 cp ../redo/README.md docs/redo.md
-cp ../seedee/README.md docs/seedee.md
+egrep -v '<div|/div>' ../seedee/README.md >docs/seedee.md
 cp ../targpg/README.md docs/targpg.md
 cp ../thefly/README.md docs/thefly.md
 cp ../nerdp/README.md docs/nerdp.md
