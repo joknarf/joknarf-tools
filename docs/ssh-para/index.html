@@ -770,11 +770,14 @@
 <a href="https://pepy.tech/project/ssh-para"><img alt="" src="https://pepy.tech/badge/ssh-para" /></a>
 <a href="https://shields.io/"><img alt="Python versions" src="https://img.shields.io/badge/python-3.6+-blue.svg" /></a></p>
 <h1 id="ssh-para">ssh-para</h1>
-<p>Parallel SSH jobs manager CLI (alternative to parallel-ssh)
-* POSIX/Linux/MacOS/Windows compatible (with openssh client installed)
-* Launch parallel ssh jobs/scripts on remote hosts, with interactive display of the running commands outputs
-* Keep all output in log files
-* Interactive pause/resume/abort jobs, kill stuck ssh connection interactively.</p>
+<p>Parallel SSH jobs manager CLI (alternative to parallel-ssh)</p>
+<ul>
+<li>POSIX/Linux/MacOS/Windows compatible (with openssh client installed)</li>
+<li>Launch parallel ssh jobs/scripts on remote hosts, with interactive display of the running commands outputs</li>
+<li>Keep all output in log files</li>
+<li>Interactive pause/resume/abort jobs, kill stuck ssh connection interactively.</li>
+</ul>
+<p>Take a look at <a href="https://github.com/joknarf/run-para">run-para</a> if you need to run parallel jobs parameterized</p>
 <p><img alt="ssh-para3" src="https://github.com/joknarf/ssh-para/assets/10117818/aef84de2-d15c-44f6-b6ff-74dc5f6f7b08" /></p>
 <h2 id="installation">installation</h2>
 <pre><code class="language-shell">pip install ssh-para
@@ -847,22 +850,28 @@ options:
   -a ARGS [ARGS ...], --args ARGS [ARGS ...]
                         script arguments
 </code></pre>
-<p>During run, use :
-* k: to kill ssh command held by a thread (but remote command can still be running on remote host)
-* p: pause all remaining jobs to be scheduled
-* r: resume scheduling of jobs
-* a: abort all remaining jobs
-* ctrl-c: stop all/exit (but remote commands launched by ssh can still be running on remote servers)</p>
-<p>Environment variables:
-* SSHP_OPTS: ssh default options (Eg: "-F /home/user/.ssh/myconfig")
-* SSHP_DOMAINS: dns domains to search when short hostname given (with -r/--resolve option)
-* SSHP_SYM_BEG: Symbol character for begin decorative (default: "\ue0b4")
-* SSHP_SYM_END: Symbol character for end decorative (default: "\ue0b6")
-* SSHP_SYM_PROG: Symbol character for progress bar fill (default: "\u25a0")
-* SSHP_SYM_RES: Symbol character before ssh output line (default: "\u25b6")</p>
-<p>Activate autocompletion:
-* <code>. &lt;(ssh-para -C bash)</code>
-* <code>ssh-para -C powershell | Out-String | Invoke-Expression</code></p>
+<p>During run, use :</p>
+<ul>
+<li>k: to kill ssh command held by a thread (but remote command can still be running on remote host)</li>
+<li>p: pause all remaining jobs to be scheduled</li>
+<li>r: resume scheduling of jobs</li>
+<li>a: abort all remaining jobs</li>
+<li>ctrl-c: stop all/exit (but remote commands launched by ssh can still be running on remote servers)</li>
+</ul>
+<p>Environment variables:</p>
+<ul>
+<li>SSHP_OPTS: ssh default options (Eg: "-F /home/user/.ssh/myconfig")</li>
+<li>SSHP_DOMAINS: dns domains to search when short hostname given (with -r/--resolve option)</li>
+<li>SSHP_SYM_BEG: Symbol character for begin decorative (default: "\ue0b4")</li>
+<li>SSHP_SYM_END: Symbol character for end decorative (default: "\ue0b6")</li>
+<li>SSHP_SYM_PROG: Symbol character for progress bar fill (default: "\u25a0")</li>
+<li>SSHP_SYM_RES: Symbol character before ssh output line (default: "\u25b6")</li>
+</ul>
+<p>Activate autocompletion:</p>
+<ul>
+<li><code>. &lt;(ssh-para -C bash)</code></li>
+<li><code>ssh-para -C powershell | Out-String | Invoke-Expression</code></li>
+</ul>
 <h2 id="example">Example</h2>
 <p>Patch redhat family hosts:</p>
 <pre><code class="language-shell">ssh-para -p 20 -f hostlist.txt -- 'sudo yum update -y;sudo shutdown -r +1'
