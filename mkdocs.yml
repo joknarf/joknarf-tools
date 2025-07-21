@@ -16,7 +16,8 @@ nav:
   - Run-para: run-para.md
   - Ssh-para: ssh-para.md
   - Pgtree: pgtree.md
-  - Sshautofs: sshautofs.md
+  - Fuse-sshautofs: fuse-sshautofs.md
+  - Fuse-memfs: fuse-memfs.md
   - Mkshz: mkshz.md
   - Targpg: targpg.md
 
