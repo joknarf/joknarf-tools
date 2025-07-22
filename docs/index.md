@@ -2,29 +2,29 @@
 
 Welcome to the documentation of all my daily shell productivity tools.
 
-* Shell plugins:
+## Shell plugins:
   * [thefly](thefly.md) Shell plugin manager / env teleporter
-  * [shell-ng](/joknarf-tools/shell-ng) All joknarf plugins in one (nerdp/redo/seedee/complete-ng/selector)
-  * [selector](/joknarf-tools/selector) Shell interactive menu plugin
-  * [nerpd](/joknarf-tools/nerdp) Nerd prompt for bash/zsh/ksh
-  * [redo](/joknarf-tools/redo) Interactive command history menu / completion
-  * [seedee](/joknarf-tools/seedee) Directory history interactive menu / completion
-  * [complete-ng](/joknarf-tools/complete-ng) Command line completion interactive
+  * [shell-ng](shell-ng.md) All joknarf plugins in one (nerdp/redo/seedee/complete-ng/selector)
+  * [selector](selector.md) Shell interactive menu plugin
+  * [nerpd](nerdp.md) Nerd prompt for bash/zsh/ksh
+  * [redo](redo.md) Interactive command history menu / completion
+  * [seedee](seedee.md) Directory history interactive menu / completion
+  * [complete-ng](complete-ng.md) Command line completion interactive
 
-* Command line tools:
-  * [pgtree](/joknarf-tools/pgtree) Unix process hierachy tree display / search / kill
-  * [run-para](/joknarf-tools/run-para) Parallel jobs manager TUI with live output
-  * [ssh-para](/joknarf-tools/ssh-para) Parallel SSH jobs manager TUI
-  * [portune](/joknarf-tools/portune) multithreaded port scanner / html report
-  * [mkshz](/joknarf-tools/mkshz) self-extractring shell archive packager
-  * [targpg](/joknarf-tools/targpg) tar command with gpg encrypt/decrypt 
+## Command line tools:
+  * [pgtree](pgtree.md) Unix process hierachy tree display / search / kill
+  * [run-para](run-para.md) Parallel jobs manager TUI with live output
+  * [ssh-para](ssh-para.md) Parallel SSH jobs manager TUI
+  * [portune](portune.md) multithreaded port scanner / html report
+  * [mkshz](mkshz.md) self-extractring shell archive packager
+  * [targpg](targpg.md) tar command with gpg encrypt/decrypt 
 
-* Web tools embedded servers:
-  * [pywebfs](/joknarf-tools/pywebfs) Simple http(s) file ferver
-  * [pywebexec](/joknarf-tools/pywebexec) http(s) API/web server command launcher and terminal sharing
+## Web tools embedded servers:
+  * [pywebfs](pywebfs.md) Simple http(s) file ferver
+  * [pywebexec](pywebexec.md) http(s) API/web server command launcher and terminal sharing
 
-* Fuse filesystems:
-  * [fuse-sshautofs](/joknarf-tools/fuse-sshautofs) fuse automount sshfs filesystems accessing hostname dir
-  * [fuse-memfs](/joknarf-tools/fuse-memfs) Simple fuse memory fs
+## Fuse filesystems:
+  * [fuse-sshautofs](fuse-sshautofs.md) fuse automount sshfs filesystems accessing hostname dir
+  * [fuse-memfs](fuse-memfs.md) Simple fuse memory fs
 
 
