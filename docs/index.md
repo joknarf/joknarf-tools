@@ -8,7 +8,7 @@ Welcome to the documentation of all my daily shell productivity tools.
   * [selector](selector.md) Shell interactive menu plugin
   * [nerpd](nerdp.md) Nerd prompt for bash/zsh/ksh
   * [redo](redo.md) Interactive command history menu / completion
-  * [seedee](seedee.md) Directory history interactive menu / completion
+  * [seedee](seedee.md) Interactive directory history menu / completion
   * [complete-ng](complete-ng.md) Command line completion interactive
 
 ## Command line tools:
