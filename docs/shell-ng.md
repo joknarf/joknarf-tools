@@ -1,3 +1,4 @@
+[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fdocs/shell-ng-black?logo=github)](https://github.com/joknarf/docs/shell-ng)
 [![bash](https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20(ksh)%20-blue.svg)]()
 
 # shell-ng

@@ -1,4 +1,4 @@
-[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fthefly-black?logo=github)](https://github.com/joknarf/thefly)
+[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fdocs/thefly-black?logo=github)](https://github.com/joknarf/docs/thefly)
 [![bash](https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh%20-blue.svg)]()
 [![bash](https://img.shields.io/badge/OS-Linux%20|%20macOS%20|%20SunOS%20...-blue.svg)]()
 

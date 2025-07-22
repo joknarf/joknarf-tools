@@ -1,3 +1,4 @@
+[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fdocs/run-para-black?logo=github)](https://github.com/joknarf/docs/run-para)
 [![Pypi version](https://img.shields.io/pypi/v/run-para.svg)](https://pypi.org/project/run-para/)
 ![example](https://github.com/joknarf/run-para/actions/workflows/python-publish.yml/badge.svg)
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)

@@ -1,3 +1,4 @@
+[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fdocs/portune-black?logo=github)](https://github.com/joknarf/docs/portune)
 [![Pypi version](https://img.shields.io/pypi/v/portune.svg)](https://pypi.org/project/portune/)
 ![example](https://github.com/joknarf/portune/actions/workflows/python-publish.yml/badge.svg)
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)

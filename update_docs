@@ -15,3 +15,9 @@ cp ../nerdp/README.md docs/nerdp.md
 cp ../ssh-para/README.md docs/ssh-para.md
 cp ../run-para/README.md docs/run-para.md
 cp ../portune/README.md docs/portune.md
+
+for i in docs/*.md;do
+   [ $i = index.md ] && continue
+   r=${i%.md}
+   sed -i "1i\[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2F$r-black?logo=github)](https://github.com/joknarf/$r)" $i
+done

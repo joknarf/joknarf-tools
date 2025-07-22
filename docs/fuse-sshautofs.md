@@ -1,3 +1,4 @@
+[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fdocs/fuse-sshautofs-black?logo=github)](https://github.com/joknarf/docs/fuse-sshautofs)
 [![go](https://img.shields.io/badge/lang-Go%20-blue.svg)]()
 
 # sshautofs

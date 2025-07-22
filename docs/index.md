@@ -1,3 +1,4 @@
+[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fdocs/index-black?logo=github)](https://github.com/joknarf/docs/index)
 # Joknarf Tools
 
 Welcome to the documentation of all my daily shell productivity tools.

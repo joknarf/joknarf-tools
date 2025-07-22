@@ -1,3 +1,4 @@
+[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fdocs/redo-black?logo=github)](https://github.com/joknarf/docs/redo)
 [![bash](https://img.shields.io/badge/shell-bash%20zsh%20-blue.svg)]()
 
 # redo
