@@ -3,7 +3,7 @@
 Welcome to the documentation of all my daily shell productivity tools.
 
 * Shell plugins:
-  * [thefly](/joknarf-tools/thefly) Shell plugin manager / env teleporter
+  * [thefly](thefly.md) Shell plugin manager / env teleporter
   * [shell-ng](/joknarf-tools/shell-ng) All joknarf plugins in one (nerdp/redo/seedee/complete-ng/selector)
   * [selector](/joknarf-tools/selector) Shell interactive menu plugin
   * [nerpd](/joknarf-tools/nerdp) Nerd prompt for bash/zsh/ksh
