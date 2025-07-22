@@ -2,7 +2,7 @@
 
 # fuse-memfs
 
-fuse memory filesystem
+Simple fuse memory filesystem
 
 # usage
 
