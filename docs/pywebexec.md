@@ -1,9 +1,9 @@
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fpywebexec-black?logo=github)](https://github.com/joknarf/pywebexec)
-[![Pypi version](https://img.shields.io/pypi/v/pywebexec.svg)](https://pypi.org/project/pywebexec/)
+[![Pypi version](https://img.shields.io/pypi/v/pywebexec.svg?logo=pypi)](https://pypi.org/project/pywebexec/)
 ![Publish Package](https://github.com/joknarf/pywebexec/actions/workflows/python-publish.yml/badge.svg)
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 [![PyPI Downloads](https://static.pepy.tech/badge/pywebexec)](https://pepy.tech/projects/pywebexec)
-[![Python versions](https://img.shields.io/badge/python-3.6+-blue.svg)](https://shields.io/)
+[![Python versions](https://img.shields.io/badge/python-3.6+-blue.svg?logo=python)](https://shields.io/)
 
 # pywebexec
 Simple Python HTTP(S) API/Web Server Command Launcher and Terminal sharing

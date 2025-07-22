@@ -1,9 +1,9 @@
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fpywebfs-black?logo=github)](https://github.com/joknarf/pywebfs)
-[![Pypi version](https://img.shields.io/pypi/v/pywebfs.svg)](https://pypi.org/project/pywebfs/)
+[![Pypi version](https://img.shields.io/pypi/v/pywebfs.svg?logo=pypi)](https://pypi.org/project/pywebfs/)
 ![example](https://github.com/joknarf/pywebfs/actions/workflows/python-publish.yml/badge.svg)
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 [![](https://pepy.tech/badge/pywebfs)](https://pepy.tech/project/pywebfs)
-[![Python versions](https://img.shields.io/badge/python-3.6+-blue.svg)](https://shields.io/)
+[![Python versions](https://img.shields.io/badge/python-3.6+-blue.svg?logo=python)](https://shields.io/)
 
 # pywebfs
 Simple Python HTTP(S) File Server

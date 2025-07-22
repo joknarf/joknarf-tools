@@ -1,9 +1,9 @@
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fportune-black?logo=github)](https://github.com/joknarf/portune)
-[![Pypi version](https://img.shields.io/pypi/v/portune.svg)](https://pypi.org/project/portune/)
+[![Pypi version](https://img.shields.io/pypi/v/portune.svg?logo=pypi)](https://pypi.org/project/portune/)
 ![example](https://github.com/joknarf/portune/actions/workflows/python-publish.yml/badge.svg)
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 [![](https://pepy.tech/badge/portune)](https://pepy.tech/project/portune)
-[![Python versions](https://img.shields.io/badge/python-3.9+-blue.svg)](https://shields.io/)
+[![Python versions](https://img.shields.io/badge/python-3.9+-blue.svg?logo=python)](https://shields.io/)
 [![bash](https://img.shields.io/badge/OS-%20Windows%20|%20Linux%20|%20macOS%20|%20SunOS%20|%20AIX%20|%20HP_UX%20...-blue.svg)]()
 
 # portune
