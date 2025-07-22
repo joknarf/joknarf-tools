@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://joknarf.github.io/joknarf-tools/targpg/">
+        <link rel="canonical" href="https://joknarf.github.io/joknarf-tools/portune/">
       
       
-        <link rel="prev" href="../mkshz/">
+        <link rel="prev" href="../fuse-memfs/">
       
+      
+        <link rel="next" href="../mkshz/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Targpg - Joknarf Tools</title>
+        <title>Portune - Joknarf Tools</title>
       
     
     
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#targpg" class="md-skip">
+        <a href="#portune" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Targpg
+              Portune
             
           </span>
         </div>
@@ -545,10 +547,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../portune/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -559,6 +570,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -589,32 +601,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Targpg
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../targpg/" class="md-nav__link">
         
   
   
@@ -625,53 +615,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pre-requisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      pre-requisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      examples
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -696,41 +639,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pre-requisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      pre-requisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      examples
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -748,34 +656,23 @@
   
 
 
-<p><a href=""><img alt="bash" src="https://img.shields.io/badge/OS-Linux%20|%20macOS%20|%20SunOS%20...-blue.svg" /></a></p>
-<h1 id="targpg">targpg</h1>
-<p>tar command extended with gpg encryption/decryption with password-file</p>
-<blockquote>
+<p><a href="https://pypi.org/project/portune/"><img alt="Pypi version" src="https://img.shields.io/pypi/v/portune.svg" /></a>
+<img alt="example" src="https://github.com/joknarf/portune/actions/workflows/python-publish.yml/badge.svg" />
+<a href="https://shields.io/"><img alt="Licence" src="https://img.shields.io/badge/licence-MIT-blue.svg" /></a>
+<a href="https://pepy.tech/project/portune"><img alt="" src="https://pepy.tech/badge/portune" /></a>
+<a href="https://shields.io/"><img alt="Python versions" src="https://img.shields.io/badge/python-3.9+-blue.svg" /></a>
+<a href=""><img alt="bash" src="https://img.shields.io/badge/OS-%20Windows%20|%20Linux%20|%20macOS%20|%20SunOS%20|%20AIX%20|%20HP_UX%20...-blue.svg" /></a></p>
+<h1 id="portune">portune</h1>
+<p>Multitreaded port scanner</p>
+<h1 id="features">features</h1>
 <ul>
-<li>Unlike <code>gpgtar</code> or other tools, just use <code>targpg</code> exactly like <code>tar</code> with all features and standard options of tar.  </li>
-<li><code>targpg</code> is just using <code>tar</code> <code>-I</code> options for <code>gpg</code> crypt/decrypt as a compression/decompression command.</li>
-<li>The first option must be <code>-p &lt;password-file&gt;</code></li>
+<li>parallel check of port availability against servers/ports</li>
+<li>console output result / summary</li>
+<li>html full report / dns domain summary / vlan timeout summary</li>
+<li>mail with html summary / report attachment (mailhost relay)</li>
 </ul>
-</blockquote>
-<p>use targpg.old_tar if your tar command does not accept <code>-I &lt;command&gt;</code> but only <code>-I &lt;prog&gt;</code></p>
-<h2 id="pre-requisites">pre-requisites</h2>
-<ul>
-<li>bash</li>
-<li>gnu tar</li>
-<li>gpg</li>
-</ul>
-<h2 id="usage">usage</h2>
-<pre><code>targpg [-p &lt;password-file&gt;] &lt;tar command options&gt;
-</code></pre>
-<p>if no <code>-p</code> option as first argument, will be prompted for password if using tty</p>
-<h2 id="examples">examples</h2>
-<pre><code>$ targpg -p ~/.mypass cvf secrets.tgp --exclude=.git secrets
-$ targpg -p &lt;(echo &quot;$pass&quot;) cvf secrets.tgp --exclude=.git secrets 
-$ targpg -p &lt;(echo &quot;$pass&quot;) xvf secrets.tgp
-$ targpg xfv secrets.tgp
-Password:
-</code></pre>
+<p><img alt="portune" src="https://github.com/user-attachments/assets/497a4c73-fb6c-4a20-b7ea-043949c49ca9" /></p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/ddea20d8-485d-44d6-8dcc-e817d396e197" /></p>
 
 
 
