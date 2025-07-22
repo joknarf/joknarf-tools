@@ -29,15 +29,15 @@ for a complete next-gen shell experience, see also these projects:
 |  parent dir (..)         | dir history browser                | dir browser                 |
 
 directory pattern can be put on command line before hitting shortcut to filter result  
-putting on command line : `work` and hitting <kbd>Shift</kbd><kbd>⇧</kbd> will bring you to last visited directory containing `work`
+putting on command line : `work` and hitting <kbd>Shift</kbd><kbd>▲</kbd> will bring you to last visited directory containing `work`
 
 | key                                          | action                                               |
 |----------------------------------------------|------------------------------------------------------|
-|<kbd>Shift</kbd><kbd>⇩</kbd>                 | cd history menu                                      |
-|<kbd>Shift</kbd><kbd>⇧</kbd>                 | return to last directory in history matching pattern |
-|<kbd>Shift</kbd><kbd>⇨</kbd>                 | navigate from current directory                      |
-|<kbd>Shift</kbd><kbd>⇦</kbd>                 | go to parent dir (cd ..)                             |
-|<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>⇩</kbd>  | search directories matching pattern in locate db     |
+|<kbd>Shift</kbd><kbd>▼</kbd>                 | cd history menu                                      |
+|<kbd>Shift</kbd><kbd>▲</kbd>                 | return to last directory in history matching pattern |
+|<kbd>Shift</kbd><kbd>▶</kbd>                 | navigate from current directory                      |
+|<kbd>Shift</kbd><kbd>◀</kbd>                 | go to parent dir (cd ..)                             |
+|<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>▼</kbd>  | search directories matching pattern in locate db     |
 
 
 * using bash, `<tab>` cd auto completion can be enabled for `cd` command:
@@ -47,16 +47,16 @@ putting on command line : `work` and hitting <kbd>Shift</kbd><kbd>⇧</kbd> will
 
 |key                             | action                                                |
 |--------------------------------|-------------------------------------------------------|
-|<kbd>⇩</kbd>                    | select next item                                      | 
-|<kbd>⇧</kbd>                    | select prev item                                      |
+|<kbd>▼</kbd>                    | select next item                                      | 
+|<kbd>▲</kbd>                    | select prev item                                      |
 |<kbd>End</kbd>                  | select last item                                      |
 |<kbd>Home</kbd>                 | select first item                                     | 
-|<kbd>⇨</kbd>                    | browse selected directory                             |
-|<kbd>⇦</kbd>                    | browse parent directory                               |
-|<kbd>Shift</kbd><kbd>⇨</kbd>   | browse selected directory with subdirectories depth 4 |
-|<kbd>Shift</kbd><kbd>⇦</kbd>   | back to only show subdirectories depth 1              |
-|<kbd>Shift</kbd><kbd>⇩</kbd>/<kbd>PgUp</kbd>/<kbd>Ctl</kbd><kbd>F</kbd>| next page    |
-|<kbd>Shift</kbd><kbd>⇧</kbd>/<kbd>PgDn</kbd>/<kbd>Ctl</kbd><kbd>B</kbd>| previous page|
+|<kbd>▶</kbd>                    | browse selected directory                             |
+|<kbd>◀</kbd>                    | browse parent directory                               |
+|<kbd>Shift</kbd><kbd>▶</kbd>   | browse selected directory with subdirectories depth 4 |
+|<kbd>Shift</kbd><kbd>◀</kbd>   | back to only show subdirectories depth 1              |
+|<kbd>Shift</kbd><kbd>▼</kbd>/<kbd>PgUp</kbd>/<kbd>Ctl</kbd><kbd>F</kbd>| next page    |
+|<kbd>Shift</kbd><kbd>▲</kbd>/<kbd>PgDn</kbd>/<kbd>Ctl</kbd><kbd>B</kbd>| previous page|
 |<kbd>Del</kbd>/<kbd>F8</kbd>    | delete directory entry in history                     |
 |<kbd>Esc</kbd>                  | exit                                                  |
 |<kbd>Ctrl</kbd><kbd>A</kbd>    | use all screen to display menu                        |
