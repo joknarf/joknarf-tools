@@ -1,3 +1,4 @@
+[![bash](https://img.shields.io/badge/shell-bash%20-blue.svg)]()
 [![bash](https://img.shields.io/badge/OS-Linux%20|%20macOS%20|%20SunOS%20...-blue.svg)]()
 
 # targpg
@@ -7,7 +8,7 @@ tar command extended with gpg encryption/decryption with password-file
 > * `targpg` is just using `tar` `-I` options for `gpg` crypt/decrypt as a compression/decompression command.
 > * The first option must be `-p <password-file>`
 
-use targpg.old_tar if your tar command does not accept `-I <command>` but only `-I <prog>`
+use `targpg.compat` if your tar command does not accept `-I <command>` but only `-I <prog>`
 
 ## pre-requisites
 
