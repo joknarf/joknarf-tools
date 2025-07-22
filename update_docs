@@ -20,5 +20,6 @@ for i in docs/*.md;do
    [ $i = docs/index.md ] && continue
    r=${i%.md}
    r=${r#*/}
+   r=${r//-/%2D}
    sed -i "1i\[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2F$r-black?logo=github)](https://github.com/joknarf/$r)" $i
 done

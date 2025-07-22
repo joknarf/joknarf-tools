@@ -1,3 +1,5 @@
+![GitHub](https://img.shields.io/badge/GitHub-joknarf-black?logo=github)](https://github.com/joknarf)
+
 # Joknarf Tools
 
 Welcome to the documentation of all my daily shell productivity tools.
