@@ -17,7 +17,8 @@ cp ../run-para/README.md docs/run-para.md
 cp ../portune/README.md docs/portune.md
 
 for i in docs/*.md;do
-   [ $i = index.md ] && continue
+   [ $i = docs/index.md ] && continue
    r=${i%.md}
+   r=${r#*/}
    sed -i "1i\[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2F$r-black?logo=github)](https://github.com/joknarf/$r)" $i
 done
