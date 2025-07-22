@@ -8,6 +8,7 @@ bash/zsh completion nextgen
 * launch menu from empty command line with <kbd>Tab</kbd> to browse files/directories
 
 for a complete next-gen shell experience, see also this project:
+
 * [joknarf/shell-ng](https://github.com/joknarf/shell-ng):
   * auto-transportable dynamic PS1 prompt (you can see it in the demo)
   * completion nextgen (this plugin)
