@@ -876,7 +876,8 @@
   
 
 
-<p><a href=""><img alt="bash" src="https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh-blue.svg" /></a></p>
+<p><a href=""><img alt="bash" src="https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh%20-blue.svg" /></a>
+<a href=""><img alt="bash" src="https://img.shields.io/badge/OS-Linux%20|%20macOS%20|%20SunOS%20...-blue.svg" /></a></p>
 <h1 id="thefly">thefly</h1>
 <p><img align=left width="150px" src="https://github.com/user-attachments/assets/a537f833-a64f-40b0-99a3-fff9cca08ce8"></p>
 <p><br/>
@@ -904,7 +905,7 @@ $ . thefly/thefly install
 <h2 id="add-plugins">Add plugins</h2>
 <pre><code>fly add joknarf/redo
 </code></pre>
-<p>clones <code>https://github.com/joknarf/redo</code> in <code>~/.fly.d/plugins/redo</code> and sources the <code>plugin.&lt;shell&gt;</code>
+<p>clones <code>https://github.com/joknarf/redo</code> in <code>~/.fly.d/plugins/redo</code> and sources the <code>plugin.&lt;shell&gt;</code><br />
 (all plugins in <code>~/fly.d/plugins/*/*.plugin.&lt;shell&gt;</code> will be sourced at login with <code>fly source</code> in your shell rc file)</p>
 <h2 id="teleport-pluginsshell-env">Teleport plugins/shell env</h2>
 <ul>
@@ -936,6 +937,16 @@ or <code>fbash</code> - <code>fzsh</code> - <code>fksh</code>  </li>
 <h2 id="customize-env">Customize env</h2>
 <p>Putting your env in <code>~/.fly.d/.flyrc</code> will be automatically sourced (must be compatible with different shells)<br />
 Putting additional shell specific env in <code>~/.fly.d/.&lt;shellname&gt;rc</code> (.bashrc/.kshrc/.zshrc), will be automatically sourced for shell.</p>
+<p>anything in <code>~.fly.d</code> will be available through ssh/sudo (flyto/flyas) in <code>$FLY_HOME/.fly.d</code><br />
+For example, just put your <code>.vimrc</code> in <code>~/.fly.d</code> and add in <code>~/.fly.d/.flyrc</code>:</p>
+<pre><code>export VIMINIT=&quot;source $FLY_HOME/.fly.d/.vimrc&quot;
+</code></pre>
+<p>same for <code>.inputrc</code>, put it in <code>~/.fly.d</code> and add in <code>~/.fly.d/.flyrc</code>:</p>
+<pre><code>export INPUTRC=&quot;$FLY_HOME/.fly.d/.inputrc&quot;
+</code></pre>
+<p>You can crate a <code>.fly.d/bin</code> directory and put scripts you want to teleport and add in your <code>.fly.d/.flyrc</code>:</p>
+<pre><code>export PATH=&quot;$PATH:$FLY_HOME/.fly.d/bin&quot;
+</code></pre>
 <h2 id="create-your-standalone-fly-package-with-your-full-shell-envplugins">Create your standalone fly package with your full shell env/plugins</h2>
 <p>save your whole shell environment to use everywhere with standalone fly package.<br />
 All your ~/.fly.d environment saved in autoextractable file. The fly package enables your env when sourced.</p>
@@ -962,7 +973,7 @@ All your ~/.fly.d environment saved in autoextractable file. The fly package ena
 <p>get env/plugins from .fly.d tgz (contains .fly.d/*)</p>
 <pre><code>$ ssh -t &lt;user&gt;@&lt;host&gt; '. &lt;(curl https://raw.githubusercontent.com/joknarf/thefly/main/thefly) remote &lt;url .fly.d.tgz&gt;'  
 </code></pre>
-<p>get env/plugins from github repository (repo contains .fly.d contents, cat contain plugins submodules)</p>
+<p>get env/plugins from github repository (repo contains .fly.d contents, and can contain plugins submodules)</p>
 <pre><code>$ ssh -t &lt;user&gt;@&lt;host&gt; '. &lt;(curl https://raw.githubusercontent.com/joknarf/thefly/main/thefly) remote &lt;git owner/repo .fly.d&gt;'  
 </code></pre>
 <h2 id="set-your-joknarf-cool-plugins-env">Set your joknarf cool plugins env</h2>

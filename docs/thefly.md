@@ -1,4 +1,5 @@
-[![bash](https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh-blue.svg)]()
+[![bash](https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh%20-blue.svg)]()
+[![bash](https://img.shields.io/badge/OS-Linux%20|%20macOS%20|%20SunOS%20...-blue.svg)]()
 
 # thefly
 
@@ -40,7 +41,7 @@ fly help
 ```
 fly add joknarf/redo
 ```
-clones `https://github.com/joknarf/redo` in `~/.fly.d/plugins/redo` and sources the `plugin.<shell>`
+clones `https://github.com/joknarf/redo` in `~/.fly.d/plugins/redo` and sources the `plugin.<shell>`  
 (all plugins in `~/fly.d/plugins/*/*.plugin.<shell>` will be sourced at login with `fly source` in your shell rc file)
 
 ## Teleport plugins/shell env
@@ -76,6 +77,19 @@ or `fbash` - `fzsh` - `fksh`
 Putting your env in `~/.fly.d/.flyrc` will be automatically sourced (must be compatible with different shells)  
 Putting additional shell specific env in `~/.fly.d/.<shellname>rc` (.bashrc/.kshrc/.zshrc), will be automatically sourced for shell.
 
+anything in `~.fly.d` will be available through ssh/sudo (flyto/flyas) in `$FLY_HOME/.fly.d`  
+For example, just put your `.vimrc` in `~/.fly.d` and add in `~/.fly.d/.flyrc`:
+```
+export VIMINIT="source $FLY_HOME/.fly.d/.vimrc"
+```
+same for `.inputrc`, put it in `~/.fly.d` and add in `~/.fly.d/.flyrc`:
+```
+export INPUTRC="$FLY_HOME/.fly.d/.inputrc"
+```
+You can crate a `.fly.d/bin` directory and put scripts you want to teleport and add in your `.fly.d/.flyrc`:
+```
+export PATH="$PATH:$FLY_HOME/.fly.d/bin"
+```
 
 ## Create your standalone fly package with your full shell env/plugins
 
@@ -120,7 +134,7 @@ get env/plugins from .fly.d tgz (contains .fly.d/*)
 $ ssh -t <user>@<host> '. <(curl https://raw.githubusercontent.com/joknarf/thefly/main/thefly) remote <url .fly.d.tgz>'  
 ```
 
-get env/plugins from github repository (repo contains .fly.d contents, cat contain plugins submodules)
+get env/plugins from github repository (repo contains .fly.d contents, and can contain plugins submodules)
 ```
 $ ssh -t <user>@<host> '. <(curl https://raw.githubusercontent.com/joknarf/thefly/main/thefly) remote <git owner/repo .fly.d>'  
 ```
