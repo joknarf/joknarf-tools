@@ -986,15 +986,15 @@ Access any remote server filesystems through a <code>&lt;hostname&gt;</code> dir
 <li>fuse3</li>
 </ul>
 <h2 id="usage">Usage</h2>
-<pre><code>$ ./sshautofs -h
+<pre><code>$ ./sshautofs
 Usage: ./sshautofs [options] &lt;mountpoint&gt;
 Example: ./sshautofs ~/mnt
 
 Options:
   -F string
         ssh config file to use
-  -cmd string
-        Command to run for /cmd/&lt;host&gt;/&lt;cmd&gt; (e.g. ps='/bin/ps -ef',...)
+  -cmd value
+        Remote commands to expose in /cmd/&lt;host&gt;/&lt;cmd&gt; (e.g. -cmd ps='/bin/ps -ef' -cmd ...)
   -foreground
         Run in foreground (do not daemonize)
   -o string
