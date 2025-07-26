@@ -968,15 +968,17 @@
 
 
 <p><a href="https://github.com/joknarf/fuse-sshautofs"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-joknarf%2Ffuse--sshautofs-black?logo=github" /></a>
-<a href=""><img alt="go" src="https://img.shields.io/badge/lang-Go%20-blue.svg?logo=go" /></a></p>
+<a href=""><img alt="go" src="https://img.shields.io/badge/lang-Go%20-blue.svg" /></a>
+<a href=""><img alt="OS" src="https://img.shields.io/badge/OS-Linux%20-blue.svg" /></a></p>
 <h1 id="sshautofs">sshautofs</h1>
-<p>fuse automount sshfs filesystems</p>
+<p>fuse automount sshfs filesystems<br />
+Access any remote server filesystems through a <code>&lt;hostname&gt;</code> directory  </p>
 <ul>
 <li>automatic access to servers filesystems through fuse-sshfs when accessing <code>&lt;mountpoint&gt;/&lt;server&gt;</code></li>
-<li>use sshfs to automatically mount <code>sshfs &lt;server&gt;:/ &lt;mountpoint&gt;-ssh/&lt;server&gt;</code></li>
+<li>transparently use sshfs to mount <code>sshfs &lt;server&gt;:/ &lt;mountpoint&gt;-ssh/&lt;server&gt;</code></li>
 <li>creates symlink <code>&lt;mountpoint&gt;/&lt;server&gt; -&gt; &lt;mountpoint&gt;-ssh/&lt;server&gt;</code> to access</li>
 <li>automatic unmount after timeout</li>
-<li>special cmd directory allow remote commands on servers</li>
+<li>special cmd directory allow specific remote commands on servers</li>
 </ul>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
@@ -998,6 +1000,9 @@ drwxr-xr-x. 1 root root      12288 Jul 12 07:43 etc
 drwxr-xr-x. 1 root root       4096 May  8 10:53 home
 -rwxrwxrwx. 1 root root    2724480 Jun  9 20:32 init
 ...
+$ tail ~/servers/myhost/var/log/messages
+Jul 26 14:55:58 myhost systemd...
+...
 $ cat ~/servers/cmd/myhost/ps
 UID          PID    PPID  C STIME TTY          TIME CMD
 root           1       0  0 Jul09 ?        00:00:06 /usr/lib/systemd/systemd --switched-root --system --deserialize 18
@@ -1013,7 +1018,7 @@ In the special <code>cmd</code> directory, a cat <code>~/servers/cmd/myhost/ps</
 <li><code>-F ~/ssh/autofs</code> define ssh config file to use for sshfs</li>
 <li><code>-foreground</code> launch sshautofs in foreground (default daemonize)</li>
 <li><code>-o ro,reconnect</code> sshfs -o options to pass</li>
-<li><code>-cmd cmd='cmd args',... commands to expose in</code>cmd` special directory</li>
+<li><code>-cmd cmd='cmd args',...</code> commands to expose in <code>cmd</code> special directory</li>
 </ul>
 
 

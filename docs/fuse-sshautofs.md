@@ -1,14 +1,16 @@
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Ffuse--sshautofs-black?logo=github)](https://github.com/joknarf/fuse-sshautofs)
-[![go](https://img.shields.io/badge/lang-Go%20-blue.svg?logo=go)]()
+[![go](https://img.shields.io/badge/lang-Go%20-blue.svg)]()
+[![OS](https://img.shields.io/badge/OS-Linux%20-blue.svg)]()
 
 # sshautofs
-fuse automount sshfs filesystems
+fuse automount sshfs filesystems  
+Access any remote server filesystems through a `<hostname>` directory  
 
 * automatic access to servers filesystems through fuse-sshfs when accessing `<mountpoint>/<server>`
-* use sshfs to automatically mount `sshfs <server>:/ <mountpoint>-ssh/<server>`
-* creates symlink `<mountpoint>/<server> -> <mountpoint>-ssh/<server>` to access
-* automatic unmount after timeout
-* special cmd directory allow remote commands on servers
+  * transparently use sshfs to mount `sshfs <server>:/ <mountpoint>-ssh/<server>`
+  * creates symlink `<mountpoint>/<server> -> <mountpoint>-ssh/<server>` to access
+  * automatic unmount after timeout
+* special cmd directory allow specific remote commands on servers
 
 ## Prerequisites
 
@@ -34,6 +36,9 @@ drwxr-xr-x. 1 root root      12288 Jul 12 07:43 etc
 drwxr-xr-x. 1 root root       4096 May  8 10:53 home
 -rwxrwxrwx. 1 root root    2724480 Jun  9 20:32 init
 ...
+$ tail ~/servers/myhost/var/log/messages
+Jul 26 14:55:58 myhost systemd...
+...
 $ cat ~/servers/cmd/myhost/ps
 UID          PID    PPID  C STIME TTY          TIME CMD
 root           1       0  0 Jul09 ?        00:00:06 /usr/lib/systemd/systemd --switched-root --system --deserialize 18
@@ -51,5 +56,5 @@ In the special `cmd` directory, a cat `~/servers/cmd/myhost/ps` executes `ssh my
 * `-F ~/ssh/autofs` define ssh config file to use for sshfs
 * `-foreground` launch sshautofs in foreground (default daemonize)
 * `-o ro,reconnect` sshfs -o options to pass
-* `-cmd cmd='cmd args',... commands to expose in `cmd` special directory
+* `-cmd cmd='cmd args',...` commands to expose in `cmd` special directory
 
