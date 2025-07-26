@@ -1024,10 +1024,16 @@ UID          PID    PPID  C STIME TTY          TIME CMD
 root           1       0  0 Jul09 ?        00:00:06 /usr/lib/systemd/systemd --switched-root --system --deserialize 18
 root           2       0  0 Jul09 ?        00:00:00 [kthreadd]
 ...
+$ grep chronyd ~/mnt/cmd/myhost/ps
+chrony       955       1  0 08:39 ?        00:00:00 /usr/sbin/chronyd
 </code></pre>
-<p>Automatically mounts <code>sshfs myhost:/ ~/servers-ssh/myhost</code> accessible through <code>~/servers/myhost</code> symlink<br />
-the mount is expiring by default after 10min, the sshfs will be unmounted if not in use.<br />
-In the special <code>cmd</code> directory, a cat <code>~/servers/cmd/myhost/ps</code> executes <code>ssh myhost 'ps -ef'</code> and display output</p>
+<blockquote>
+<ul>
+<li>Automatically mounts <code>sshfs myhost:/ ~/servers-ssh/myhost</code> accessible through <code>~/servers/myhost</code> symlink  </li>
+<li>the mount is expiring by default after 10min, the sshfs will be unmounted after 10min without access.  </li>
+<li>In the special <code>cmd</code> directory, a cat <code>~/servers/cmd/myhost/ps</code> executes <code>ssh myhost 'ps -ef'</code> and display output</li>
+</ul>
+</blockquote>
 <h2 id="options">Options</h2>
 <ul>
 <li><code>-timeout=1m</code> define expiration timeout to unmount sshfs</li>
