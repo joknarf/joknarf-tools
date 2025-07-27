@@ -1,0 +1,26 @@
+---
+layout: default
+title: "joknarf tools"
+---
+  - [Home](index.md)
+  - Shell plugins:
+    - [Thefly](thefly.md)
+    - Shell-ng: shell-ng.md
+    - Selector: selector.md
+    - Nerdp: nerdp.md
+    - Redo: redo.md
+    - Seedee: seedee.md
+    - Complete-ng: complete-ng.md
+  - Command Line:
+    - Pgtree: pgtree.md
+    - Run-para: run-para.md
+    - Ssh-para: ssh-para.md
+    - Portune: portune.md
+    - Mkshz: mkshz.md
+    - Targpg: targpg.md
+  - Web tools:
+    - Pywebfs: pywebfs.md
+    - Pywebexec: pywebexec.md
+  - Fuse fs:
+    - Fuse-sshautofs: fuse-sshautofs.md
+    - Fuse-memfs: fuse-memfs.md
