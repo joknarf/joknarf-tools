@@ -14,7 +14,7 @@ collections:
   Shell-plugins:
     output: true
     permalink: /:collection/:path
-  Command-Line:
+  Command-line:
     output: true
     permalink: /:collection/:path
   Web-tools:
