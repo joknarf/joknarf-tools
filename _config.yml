@@ -13,7 +13,8 @@ plugins:
 collections:
   collection-name: pages
     output: true
-    permalink: /:collection/:path
+    permalink: /pages
+#    permalink: /:collection/:path
 nav:
   - Home: /
   - Shell plugins:
