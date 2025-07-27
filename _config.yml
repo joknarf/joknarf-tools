@@ -3,7 +3,33 @@ title: Joknarf Tools
 description: Unix CLI tools and automation
 url: https://joknarf.github.io/joknarf-tools
 remote_theme: pages-themes/hacker
+include:
+  - _pages
+
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-remote-theme
+nav:
+  - [Home](/)
+  - Shell plugins:
+    - [Thefly](/joknarf-tools/thefly/)
+    - [Shell-ng](/shell-ng/)
+    - Selector: selector.md
+    - Nerdp: nerdp.md
+    - Redo: redo.md
+    - Seedee: seedee.md
+    - Complete-ng: complete-ng.md
+  - Command Line:
+    - Pgtree: pgtree.md
+    - Run-para: run-para.md
+    - Ssh-para: ssh-para.md
+    - Portune: portune.md
+    - Mkshz: mkshz.md
+    - Targpg: targpg.md
+  - Web tools:
+    - Pywebfs: pywebfs.md
+    - Pywebexec: pywebexec.md
+  - Fuse fs:
+    - Fuse-sshautofs: fuse-sshautofs.md
+    - Fuse-memfs: fuse-memfs.md
