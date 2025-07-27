@@ -2,7 +2,8 @@ name: joknarf
 title: Joknarf Tools
 description: Unix CLI tools and automation
 url: https://joknarf.github.io/joknarf-tools
-remote_theme: pages-themes/hacker
+#remote_theme: pages-themes/hacker
+remote_theme: morpheus636/hacker-docs-theme
 include:
   - _pages
 plugins:
