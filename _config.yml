@@ -4,8 +4,8 @@ description: Unix CLI tools and automation
 url: https://joknarf.github.io/joknarf-tools
 #remote_theme: pages-themes/hacker
 remote_theme: morpheus636/hacker-docs-theme
-include:
-  - _pages
+#include:
+#  - _pages
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
