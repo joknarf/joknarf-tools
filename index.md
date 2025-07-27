@@ -4,12 +4,12 @@ Welcome to the documentation of all my daily shell productivity tools.
 
 ## Shell plugins:
   * [thefly](_Shell-plugins/thefly.md) Shell plugin manager / env teleporter
-  * [shell-ng](Shell-plugins/shell-ng.md) All joknarf plugins in one (nerdp/redo/seedee/complete-ng/selector)
-  * [selector](Shell-plugins/selector.md) Shell interactive menu plugin
-  * [nerpd](Shell-plugins/nerdp.md) Nerd prompt for bash/zsh/ksh
-  * [redo](Shell-plugins/redo.md) Interactive command history menu / completion
-  * [seedee](Shell-plugins/seedee.md) Interactive directory history menu / completion
-  * [complete-ng](Shell-plugins/complete-ng.md) Command line completion interactive
+  * [shell-ng](_Shell-plugins/shell-ng.md) All joknarf plugins in one (nerdp/redo/seedee/complete-ng/selector)
+  * [selector](_Shell-plugins/selector.md) Shell interactive menu plugin
+  * [nerpd](_Shell-plugins/nerdp.md) Nerd prompt for bash/zsh/ksh
+  * [redo](_Shell-plugins/redo.md) Interactive command history menu / completion
+  * [seedee](_Shell-plugins/seedee.md) Interactive directory history menu / completion
+  * [complete-ng](_Shell-plugins/complete-ng.md) Command line completion interactive
 
 ## Command line tools:
   * [pgtree](_Command-line/pgtree.md) Unix process hierachy tree display / search / kill
