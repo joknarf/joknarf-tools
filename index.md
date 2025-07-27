@@ -1,6 +1,3 @@
----                                                                                             layout: default
-title: "Joknarf"
----
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf-black?logo=github)](https://github.com/joknarf)
 
 # Joknarf Tools
