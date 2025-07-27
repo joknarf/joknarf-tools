@@ -1,11 +1,9 @@
 ---
 layout: wiki
 title: "Joknarf"
+position: 0
 ---
-<style>
-.container {                                                                                      max-width: unset;
-}
-</style> 
+
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf-black?logo=github)](https://github.com/joknarf)
 
 Welcome to the documentation of all my daily shell productivity tools.

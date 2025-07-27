@@ -1,6 +1,10 @@
 ---
 layout: wiki
 ---
+<style>
+.container {                                                                                      max-width: unset;
+}
+</style>
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fportune-black?logo=github)](https://github.com/joknarf/portune)
 [![Pypi version](https://img.shields.io/pypi/v/portune.svg?logo=pypi)](https://pypi.org/project/portune/)
 ![example](https://github.com/joknarf/portune/actions/workflows/python-publish.yml/badge.svg)

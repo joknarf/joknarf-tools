@@ -1,6 +1,10 @@
 ---
 layout: wiki
 ---
+<style>
+.container {                                                                                      max-width: unset;
+}
+</style>
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fpgtree-black?logo=github)](https://github.com/joknarf/pgtree)
 [![Codecov](https://codecov.io/github/joknarf/pgtree/coverage.svg?branch=master)](https://codecov.io/gh/joknarf/pgtree)
 [![Upload Python Package](https://github.com/joknarf/pgtree/workflows/Upload%20Python%20Package/badge.svg)](https://github.com/joknarf/pgtree/actions?query=workflow%3A%22Upload+Python+Package%22)
