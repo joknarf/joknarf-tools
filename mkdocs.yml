@@ -31,10 +31,10 @@ nav:
 
 plugins:
   - search
-#  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-#  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-#  - jekyll-include-cache 
-#  - jekyll-remote-theme
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-include-cache 
+  - jekyll-remote-theme
   # - mkdocs-material if using Material theme
 
 extra:
