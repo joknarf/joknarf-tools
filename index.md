@@ -4,7 +4,7 @@ title: "joknarf tools"
 ---
   - [Home](index.md)
   - Shell plugins:
-    - [Thefly](thefly.md)
+    - [Thefly](_pages/thefly.md)
     - Shell-ng: shell-ng.md
     - Selector: selector.md
     - Nerdp: nerdp.md
