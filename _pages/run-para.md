@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: wiki
 ---
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Frun--para-black?logo=github)](https://github.com/joknarf/run-para)
 [![Pypi version](https://img.shields.io/pypi/v/run-para.svg?logo=pypi)](https://pypi.org/project/run-para/)

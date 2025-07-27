@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: wiki
 ---
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fssh--para-black?logo=github)](https://github.com/joknarf/ssh-para)
 [![Pypi version](https://img.shields.io/pypi/v/ssh-para.svg?logo=pypi)](https://pypi.org/project/ssh-para/)

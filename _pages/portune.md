@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: wiki
 ---
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fportune-black?logo=github)](https://github.com/joknarf/portune)
 [![Pypi version](https://img.shields.io/pypi/v/portune.svg?logo=pypi)](https://pypi.org/project/portune/)

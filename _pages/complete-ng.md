@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: wiki
 permalink: /complete-ng
 ---
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fcomplete--ng-black?logo=github)](https://github.com/joknarf/complete-ng)
