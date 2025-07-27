@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 ---
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fpgtree-black?logo=github)](https://github.com/joknarf/pgtree)
 [![Codecov](https://codecov.io/github/joknarf/pgtree/coverage.svg?branch=master)](https://codecov.io/gh/joknarf/pgtree)
