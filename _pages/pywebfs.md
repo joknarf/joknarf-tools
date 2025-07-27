@@ -1,4 +1,6 @@
----                                                                                             layout: default                                                                                 ---
+---
+layout: default
+---
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fpywebfs-black?logo=github)](https://github.com/joknarf/pywebfs)
 [![Pypi version](https://img.shields.io/pypi/v/pywebfs.svg?logo=pypi)](https://pypi.org/project/pywebfs/)
 ![example](https://github.com/joknarf/pywebfs/actions/workflows/python-publish.yml/badge.svg)

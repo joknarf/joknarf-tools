@@ -1,4 +1,5 @@
----                                                                                             layout: default
+---
+layout: default
 ---
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fmkshz-black?logo=github)](https://github.com/joknarf/mkshz)
 [![bash](https://img.shields.io/badge/shell-bash%20-blue.svg)]()
