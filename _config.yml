@@ -1,13 +1,7 @@
 title: Joknarf Tools
-description: "Unix CLI tools and automation"
+description: Unix CLI tools and automation
 remote_theme: pages-themes/hacker
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-include-cache 
   - jekyll-remote-theme
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/joknarf
