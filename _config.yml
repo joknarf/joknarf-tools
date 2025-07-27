@@ -11,9 +11,19 @@ plugins:
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-remote-theme
 collections:
-  pages:
+  Shell-plugins:
     output: true
     permalink: /:collection/:path
+  Command-Line:
+    output: true
+    permalink: /:collection/:path
+  Web-tools:
+    output: true
+    permalink: /:collection/:path
+  Fuse-fs:
+    output: true
+    permalink: /:collection/:path
+
 nav:
   - Home: /
   - Shell plugins:
