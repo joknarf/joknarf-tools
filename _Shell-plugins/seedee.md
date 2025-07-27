@@ -31,7 +31,6 @@ for a complete next-gen shell experience, see also these projects:
 * using bash/zsh in emacs or vi mode, key binding is available as shortcuts:
   * default key binding with <kbd>Shift</kbd><kbd>Arrows</kbd> or <kbd>Ctrl</kbd><kbd>Arrows</kbd> (can be overridden using CD*BIND variables)
 
-<div align="center">
  
 | Left                    | Up/Down                             | Right                       |
 |:-----------------------:|:-----------------------------------:|:---------------------------:|
@@ -51,7 +50,6 @@ putting on command line : `work` and hitting <kbd>Shift</kbd><kbd>▲</kbd> will
 |<kbd>Shift</kbd><kbd>◀</kbd>                 | go to parent dir (cd ..)                             |
 |<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>▼</kbd>  | search directories matching pattern in locate db     |
 
-</div>
 
 * using bash, `<tab>` cd auto completion can be enabled for `cd` command:
   * setting env variable `CDCOMPLETE=y` before sourcing `seedee`
