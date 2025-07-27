@@ -9,7 +9,7 @@ p > img {
   padding: 10px;
 }
 .container {
-  max-width: unset;
+  max-width: 1300px;
 }
 </style>
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fthefly-black?logo=github)](https://github.com/joknarf/thefly)

@@ -2,7 +2,7 @@
 layout: wiki
 ---
 <style>
-.container {                                                                                      max-width: unset;
+.container {                                                                                      max-width: 1300px;
 }
 </style>
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fmkshz-black?logo=github)](https://github.com/joknarf/mkshz)

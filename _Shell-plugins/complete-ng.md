@@ -4,7 +4,7 @@ permalink: /complete-ng
 ---
 <style>
 .container {
-  max-width: unset;
+  max-width: 1300px;
 }
 </style>
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fcomplete--ng-black?logo=github)](https://github.com/joknarf/complete-ng)
