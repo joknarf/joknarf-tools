@@ -2,8 +2,9 @@ site_name: Joknarf Tools
 site_url: https://joknarf.github.io/joknarf-tools/
 repo_url: https://github.com/joknarf/joknarf-tools
 repo_name: joknarf-tools
-theme:
-  name: material
+remote_theme: pages-themes/hacker
+#theme:
+#  name: material
 nav:
   - Home: index.md
   - Shell plugins:
