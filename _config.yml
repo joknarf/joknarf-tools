@@ -1,5 +1,7 @@
+name: joknarf
 title: Joknarf Tools
 description: Unix CLI tools and automation
+url: https://joknarf.github.io/joknarf-tools
 remote_theme: pages-themes/hacker
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
