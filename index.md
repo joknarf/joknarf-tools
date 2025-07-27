@@ -7,7 +7,7 @@ Welcome to the documentation of all my daily shell productivity tools.
 ## Shell plugins:
   * [thefly](thefly/) Shell plugin manager / env teleporter
   * [shell-ng](shell-ng/) All joknarf plugins in one (nerdp/redo/seedee/complete-ng/selector)
-  * [selector](selector/) Shell interactive menu plugin
+  * [selector](_pages/selector.md) Shell interactive menu plugin
   * [nerpd](nerdp/) Nerd prompt for bash/zsh/ksh
   * [redo](redo/) Interactive command history menu / completion
   * [seedee](seedee/) Interactive directory history menu / completion
