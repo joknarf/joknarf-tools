@@ -10,6 +10,10 @@ plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-remote-theme
+collections:
+  collection-name: pages
+    output: true
+    permalink: /:collection/:path
 nav:
   - Home: /
   - Shell plugins:
