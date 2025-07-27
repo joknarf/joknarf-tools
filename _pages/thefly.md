@@ -1,7 +1,8 @@
 ---
 layout: wiki
 title: thefly
-permalink: /thefly/
+position: 0
+#permalink: /thefly/
 ---
 <style>
 p > img {
