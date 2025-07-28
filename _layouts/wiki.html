@@ -25,7 +25,11 @@
         </section>
       </div>
       <aside class="toc-sidebar">
-        {{ "* TOC\n{:toc}" | markdownify }}
+      {% capture toc_md %}
+* TOC
+{:toc}
+      {% endcapture %}
+      {{ toc_md | markdownify }}
       </aside>
     </div>
     {% include footer.html %}
