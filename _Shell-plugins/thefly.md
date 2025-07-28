@@ -11,6 +11,9 @@ p > img {
 .container {
   max-width: 1300px;
 }
+.sidebar2 {
+  font-size: 80%;
+}
 </style>
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fthefly-black?logo=github)](https://github.com/joknarf/thefly)
 [![bash](https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh%20-blue.svg)]()
@@ -19,8 +22,10 @@ p > img {
 
 # thefly
 
+<div class=sidebar2>
 * TOC
 {:toc}
+</div>
 
 <img align=left width="150px" src="https://github.com/user-attachments/assets/a537f833-a64f-40b0-99a3-fff9cca08ce8">
 
