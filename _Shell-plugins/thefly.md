@@ -11,7 +11,7 @@ p > img {
 .container {
   max-width: 1300px;
 }
-.sidebar2 {
+#markdown-toc {
   font-size: 80%;
 }
 </style>
@@ -22,10 +22,8 @@ p > img {
 
 # thefly
 
-<div class=sidebar2>
 * TOC
 {:toc}
-</div>
 
 <img align=left width="150px" src="https://github.com/user-attachments/assets/a537f833-a64f-40b0-99a3-fff9cca08ce8">
 
