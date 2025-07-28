@@ -4,28 +4,6 @@ title: thefly
 position: 0
 #permalink: /thefly/
 ---
-<style>
-p > img {
-  padding: 10px;
-}
-.container {
-  max-width: 1300px;
-}
-ul#markdown-toc {
-  font-size: 80%;
-  float: right;
-  width: 250px;
-  background: #111;
-  padding: 1rem;
-  border-left: 3px solid lime;
-  margin: 0 0 1rem 2rem;
-  font-size: 0.9rem;
-  position: sticky;
-  top: 1rem;
-  max-height: 90vh;
-  overflow-y: auto;
-}
-</style>
 
 * TOC
 {:toc}
