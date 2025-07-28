@@ -11,15 +11,21 @@ p > img {
 .container {
   max-width: 1300px;
 }
-#markdown-toc {
+ul#markdown-toc {
   font-size: 80%;
+  float: right;
+  width: 250px;
+  background: #111;
+  padding: 1rem;
+  border-left: 3px solid lime;
+  margin: 0 0 1rem 2rem;
+  font-size: 0.9rem;
+  position: sticky;
+  top: 1rem;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 </style>
-
-<div id="toc-sidebar">
-* TOC
-{:toc}
-</div>
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fthefly-black?logo=github)](https://github.com/joknarf/thefly)
 [![bash](https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh%20-blue.svg)]()
