@@ -1,10 +1,9 @@
 ---
 layout: wiki
 ---
-<style>
-.container {                                                                                      max-width: 1300px;
-}
-</style>
+* TOC
+{:toc}
+
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Ffuse--sshautofs-black?logo=github)](https://github.com/joknarf/fuse-sshautofs)
 [![go](https://img.shields.io/badge/lang-Go%20-blue.svg)]()
 [![OS](https://img.shields.io/badge/OS-Linux%20-blue.svg)]()

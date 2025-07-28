@@ -1,10 +1,9 @@
 ---
 layout: wiki
 ---
-<style>
-.container {                                                                                      max-width: 1300px;
-}
-</style>
+* TOC
+{:toc}
+
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Ffuse--memfs-black?logo=github)](https://github.com/joknarf/fuse-memfs)
 [![go](https://img.shields.io/badge/lang-Go%20-blue.svg?logo=go)]()
 
