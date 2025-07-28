@@ -2,7 +2,8 @@
 layout: wiki
 permalink: /complete-ng
 ---
-* TOC                                                                                                                                                       {:toc}
+* TOC
+{:toc}
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fcomplete--ng-black?logo=github)](https://github.com/joknarf/complete-ng)
 [![bash](https://img.shields.io/badge/shell-bash%20|%20zsh%20-blue.svg)]()

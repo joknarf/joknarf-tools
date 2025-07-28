@@ -2,7 +2,8 @@
 layout: wiki
 title: nerdp
 ---
-* TOC                                                                                                                                                       {:toc}
+* TOC
+{:toc}
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fnerdp-black?logo=github)](https://github.com/joknarf/nerdp)
 [![bash](https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh%20-blue.svg)]()

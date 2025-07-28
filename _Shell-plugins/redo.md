@@ -1,7 +1,8 @@
 ---
 layout: wiki
 ---
-* TOC                                                                                                                                                       {:toc}
+* TOC
+{:toc}
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fredo-black?logo=github)](https://github.com/joknarf/redo)
 [![bash](https://img.shields.io/badge/shell-bash%20zsh%20-blue.svg)]()
