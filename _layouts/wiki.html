@@ -24,7 +24,7 @@
           {{ content }}
         </section>
       </div>
-      <aside class="toc-sidebar">
+      <aside id="toc-sidebar">
       {% capture toc_md %}
 * TOC
 {:toc}
@@ -34,3 +34,8 @@
     </div>
     {% include footer.html %}
   </body>
+<script>
+var element = document.getElementById('#markdown-toc');
+var destination = document.getElementById('#toc-sidebar');
+destination.appendChild(element);
+</script>
