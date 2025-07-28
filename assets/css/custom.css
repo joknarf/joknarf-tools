@@ -4,3 +4,22 @@ p > img {
 .container {
   max-width: unset;
 }
+
+#toc-sidebar {
+  position: sticky;
+  top: 1rem;
+  float: right;
+  width: 250px;
+  margin-left: 2rem;
+  background: #1a1a1a;
+  border-left: 3px solid lime;
+  padding: 1rem;
+  font-size: 0.9rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+
+.markdown-body {
+  max-width: 800px;
+  margin-right: 300px; /* Make room for TOC on the right */
+}
