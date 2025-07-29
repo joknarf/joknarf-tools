@@ -49,6 +49,6 @@ nav:
     - Fuse-memfs: fuse-memfs.md
 
 markdown: kramdown
-kramdown:
-  toc_levels: 2..3
-  auto_ids: true
+#kramdown:
+#  toc_levels: 2..3
+#  auto_ids: true
