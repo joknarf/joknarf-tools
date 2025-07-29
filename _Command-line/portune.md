@@ -16,7 +16,7 @@ layout: wiki
 
 Multithreaded port scanner
 
-# features
+## features
 
 * parallel check of port availability against servers/ports
 * console output result / summary

@@ -11,7 +11,7 @@ layout: wiki
 
 Simple fuse memory filesystem
 
-# usage
+## usage
 
 ```
 $ memfs <mountpoint>
