@@ -35,9 +35,11 @@ Creates a shell script `<file.shz>` with embedded tgz archive created from `<dir
 * shz_version environment variable can be set to get the version of the archive using `v-shz` parameter.
 
 Example usage:
+
 ```
 $ shz_version=v1.2 mkshz install.shz app/ bin/config.sh --pre-extract bin/pre-stop.bash --exclude=.git --exclude=*.o
 ```
+
 Notes:
 * The `<command>` arguments are relative to `<dir>`.
 * The script generated will be created with a shebang line for bash.
