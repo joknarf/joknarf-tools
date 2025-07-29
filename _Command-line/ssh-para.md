@@ -6,7 +6,7 @@ layout: wiki
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fssh--para-black?logo=github)](https://github.com/joknarf/ssh-para)
 [![Pypi version](https://img.shields.io/pypi/v/ssh-para.svg?logo=pypi)](https://pypi.org/project/ssh-para/)
-![example](https://github.com/joknarf/ssh-para/actions/workflows/python-publish.yml/badge.svg)
+[![Publish](https://github.com/joknarf/ssh-para/actions/workflows/python-publish.yml/badge.svg)](https://github.com/joknarf/ssh-para/actions)
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 [![](https://pepy.tech/badge/ssh-para)](https://pepy.tech/project/ssh-para)
 [![Python versions](https://img.shields.io/badge/python-3.6+-blue.svg?logo=python)](https://shields.io/)
