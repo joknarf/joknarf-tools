@@ -52,7 +52,8 @@ $ shz_version=v1.2 mkshz installapp.shz app bin/setup.sh --pre-extract bin/stopa
 ```
 
 * Generated script `installapp.shz`:
-```
+
+```bash
 #!/bin/bash                                                                                                                                                                         
 # Script created with mkshz
 # This script extracts embedded tgz archive 
