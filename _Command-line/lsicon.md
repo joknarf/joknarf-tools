@@ -12,7 +12,7 @@ layout: wiki
 
 Simple ls command enhancer in less than 12K (only uses bash/ls/awk)
 
-<img width="1641" height="584" alt="image" src="https://github.com/user-attachments/assets/85f3031a-c7e7-4add-a6eb-30b14efb26cc" />
+![image](https://github.com/user-attachments/assets/85f3031a-c7e7-4add-a6eb-30b14efb26cc)
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Simple ls command enhancer in less than 12K (only uses bash/ls/awk)
 
 ## Install
 
-You use a plugin manager, like the famous [thefly](https://github.com/joknarf/thefly)
+You can use a plugin manager, like the famous [thefly](https://github.com/joknarf/thefly)
 ```
 fly add joknarf/lsicon
 ```
@@ -51,9 +51,9 @@ alias ls='ls+'
 You can customize all icons association :
 - editing `ls+.icons`
 - creating a `~/.config/ls+/icons` file
-- format of file : <icon> <ext> [<ext>...]
+- format of file : `<icon> <ext> [<ext>...]`
 
 You can customize all colors association :
 - editing `ls+.colors`
 - creating a `~/.config/ls+/colors` file
-- format of file : <colorname> <ext> [<ext>...]
+- format of file : `<colorname> <ext> [<ext>...]`
