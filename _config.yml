@@ -41,6 +41,7 @@ nav:
     - Portune: portune.md
     - Mkshz: mkshz.md
     - Targpg: targpg.md
+    - LSicon: lsicon.md
   - Web tools:
     - Pywebfs: pywebfs.md
     - Pywebexec: pywebexec.md
