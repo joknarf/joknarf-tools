@@ -7,6 +7,7 @@ layout: wiki
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Flsicon-black?logo=github)](https://github.com/joknarf/lsicon)
 [![bash](https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh%20-blue.svg)]()
 [![bash](https://img.shields.io/badge/OS-Linux%20|%20macOS%20|%20SunOS%20...-blue.svg)]()
+[![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 
 # lsicon
 
@@ -26,6 +27,7 @@ Simple ls command enhancer in less than 12K (only uses bash/ls/awk)
 
 You can use a plugin manager, like the famous [thefly](https://github.com/joknarf/thefly)
 ```
+. <(curl https://raw.githubusercontent.com/joknarf/thefly/main/thefly) install
 fly add joknarf/lsicon
 ```
 or just clone the repo, and put `ls+*` files in dir in your PATH

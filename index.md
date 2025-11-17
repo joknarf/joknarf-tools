@@ -19,6 +19,7 @@ Welcome to the documentation of all my daily shell productivity tools.
   * [mkshz](_Command-line/mkshz.md) self-extractring shell archive packager
   * [targpg](_Command-line/targpg.md) tar command with gpg encrypt/decrypt 
   * [lsicon](_Command-line/lsicon.md) simple ls enhancer (icons/colors)
+  * [dfbar](_Command-line/dfbar.md) simple df enhancer (colors/percent bar)
 
 ## Web tools embedded servers:
   * [pywebfs](_Web-tools/pywebfs.md) Simple http(s) file ferver

@@ -42,6 +42,7 @@ nav:
     - Mkshz: mkshz.md
     - Targpg: targpg.md
     - LSicon: lsicon.md
+    - DFbar: dfbar.md
   - Web tools:
     - Pywebfs: pywebfs.md
     - Pywebexec: pywebexec.md
