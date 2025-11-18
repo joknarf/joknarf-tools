@@ -15,6 +15,17 @@ Simple ls command enhancer in less than 12K (only uses bash/ls/awk)
 
 ![image](https://github.com/user-attachments/assets/85f3031a-c7e7-4add-a6eb-30b14efb26cc)
 
+Much faster than other tools (here /usr containing ~150000 files):
+
+| Tool       | Command                | Time (wsl ubuntu)  | Time (centos9)   |
+|------------|------------------------|--------------------|------------------|
+|            |                        | `tty       notty`  | `tty     notty`  |
+| GNU ls     | `ls -lR --color /usr ` | `10.250s   6.001s` | `2.011s  1.049s` |   
+| **lsicon** | `ls+ -lR /usr        ` | `10.878s   6.096s` | `3.202s  1.269s` |   
+| lsd        | `lsd -lR /usr        ` | `27.941s  13.698s` | `8.564s  2.627s` |
+| eza        | `eza --icons -lR /usr` | `31.340s  28.509s` | `8.795s  4.751s` |
+
+
 ## Prerequisites
 
 * GNU ls
@@ -59,3 +70,10 @@ You can customize all colors association :
 - editing `ls+.colors`
 - creating a `~/.config/ls+/colors` file
 - format of file : `<colorname> <ext> [<ext>...]`
+
+You can customize all theme colors :
+- editing `ls+.theme`
+- creating a `~/.config/ls+/theme` file
+- format of file : `<colorname> <r;g;b>`
+- creating an empty theme, will use standard 16 colors
+
