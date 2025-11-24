@@ -11,26 +11,35 @@ layout: wiki
 
 # lsicon
 
-Simple ls command enhancer in less than 12K (only uses bash/ls/awk)
+Simplest and fastest `ls` command enhancer in less than 16K (only uses bash/ls/awk)
 
-![image](https://github.com/user-attachments/assets/85f3031a-c7e7-4add-a6eb-30b14efb26cc)
+![image](https://github.com/user-attachments/assets/d76ec9f8-b745-46ef-8ce1-2c667ba7c578)
 
-Much faster than other tools (here /usr containing ~150000 files):
+Much faster than other "modern" tools (here /usr containing ~150000 files):
 
 | Tool       | Command                | Time (wsl ubuntu)  | Time (centos9)   |
 |------------|------------------------|--------------------|------------------|
 |            |                        | `tty       notty`  | `tty     notty`  |
-| GNU ls     | `ls -lR --color /usr ` | `10.250s   6.001s` | `2.011s  1.049s` |   
-| **lsicon** | `ls+ -lR /usr        ` | `10.878s   6.096s` | `3.202s  1.269s` |   
+| GNU ls     | `ls -lR --color /usr ` | `10.250s   6.001s` | `2.011s  1.049s` |
+| **lsicon** | `ls+ -lR /usr        ` | `10.878s   6.096s` | `3.202s  1.269s` |
 | lsd        | `lsd -lR /usr        ` | `27.941s  13.698s` | `8.564s  2.627s` |
 | eza        | `eza --icons -lR /usr` | `31.340s  28.509s` | `8.795s  4.751s` |
 
+## features
+
+* all GNU ls features
+* display colors/icons according to file types/extensions/permissions
+* display symlink target according to target file types/permissions
+* display broken symlink
+* highlight current user/groups and permissions
+* easy customization for colors/icons/extensions
 
 ## Prerequisites
 
 * GNU ls
-  * on BSD/MacOS coreutils package needed
-* awk
+  * on BSD/MacOS/Alpine coreutils package needed
+* GNU awk
+  * on BSD/MacOS/Alpine gawk package needed
 * bash
 * Nerd Font in your Terminal
 
@@ -58,22 +67,25 @@ You may want to replace the `ls` command with ls+ using:
 ```
 alias ls='ls+'
 ```
+By default with stdout not a tty, `ls+` falls back to ls command, if want to pipe to pager (less...) with icons/colors:
+```
+ls+ --color |less -RESX
+```
 
 ## Customize
 
 You can customize all icons association :
 - editing `ls+.icons`
 - creating a `~/.config/ls+/icons` file
-- format of file : `<icon> <ext> [<ext>...]`
+- format of file : `<icon> .<ext> [.<ext>...]`
 
 You can customize all colors association :
 - editing `ls+.colors`
 - creating a `~/.config/ls+/colors` file
-- format of file : `<colorname> <ext> [<ext>...]`
+- format of file : `<colorname> .<ext> [.<ext>...]`
 
 You can customize all theme colors :
 - editing `ls+.theme`
 - creating a `~/.config/ls+/theme` file
 - format of file : `<colorname> <r;g;b>`
 - creating an empty theme, will use standard 16 colors
-
