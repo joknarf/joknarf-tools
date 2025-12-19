@@ -4,7 +4,7 @@ layout: wiki
 * TOC
 {:toc}
 
-[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Flsicon-black?logo=github)](https://github.com/joknarf/lsicon)
+[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fneonfiglet-black?logo=github)](https://github.com/joknarf/neonfiglet)
 [![bash](https://img.shields.io/badge/shell-bash%203.x%2b%20-blue.svg)]()
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 
