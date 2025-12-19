@@ -20,6 +20,7 @@ Welcome to the documentation of all my daily shell productivity tools.
   * [targpg](_Command-line/targpg.md) tar command with gpg encrypt/decrypt 
   * [lsicon](_Command-line/lsicon.md) simple ls enhancer (icons/colors)
   * [dfbar](_Command-line/dfbar.md) simple df enhancer (colors/percent bar)
+  * [neonfiglet](_Command-line/neonfiglet.md) animated colorfull rainbow banners
 
 ## Web tools embedded servers:
   * [pywebfs](_Web-tools/pywebfs.md) Simple http(s) file ferver

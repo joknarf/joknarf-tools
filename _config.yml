@@ -43,6 +43,7 @@ nav:
     - Targpg: targpg.md
     - LSicon: lsicon.md
     - DFbar: dfbar.md
+    - NeonFIGlet: neonfiglet.md
   - Web tools:
     - Pywebfs: pywebfs.md
     - Pywebexec: pywebexec.md
