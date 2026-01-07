@@ -5,6 +5,7 @@ layout: wiki
 {:toc}
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fshellme-black?logo=github)](https://github.com/joknarf/shellme)
+[![Build and Release Packages](https://github.com/joknarf/shellme/actions/workflows/release.yml/badge.svg)](https://github.com/joknarf/shellme/actions/workflows/release.yml)
 [![bash](https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh%20-blue.svg)]()
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 
