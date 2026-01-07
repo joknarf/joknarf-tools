@@ -5,6 +5,7 @@ layout: wiki
 {:toc}
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Ffuse--sshautofs-black?logo=github)](https://github.com/joknarf/fuse-sshautofs)
+[![Build binary packages](https://github.com/joknarf/fuse-sshautofs/actions/workflows/release.yml/badge.svg)](https://github.com/joknarf/fuse-sshautofs/actions/workflows/release.yml)
 [![go](https://img.shields.io/badge/lang-Go%20-blue.svg)]()
 [![OS](https://img.shields.io/badge/OS-Linux%20-blue.svg)]()
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
