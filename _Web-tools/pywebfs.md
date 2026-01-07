@@ -6,7 +6,7 @@ layout: wiki
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fpywebfs-black?logo=github)](https://github.com/joknarf/pywebfs)
 [![Pypi version](https://img.shields.io/pypi/v/pywebfs.svg?logo=pypi)](https://pypi.org/project/pywebfs/)
-![example](https://github.com/joknarf/pywebfs/actions/workflows/python-publish.yml/badge.svg)
+[![Build and Release Packages](https://github.com/joknarf/pywebfs/actions/workflows/release.yml/badge.svg)](https://github.com/joknarf/pywebfs/actions/workflows/release.yml)
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 [![](https://pepy.tech/badge/pywebfs)](https://pepy.tech/project/pywebfs)
 [![Python versions](https://img.shields.io/badge/python-3.6+-blue.svg?logo=python)](https://shields.io/)
