@@ -5,6 +5,7 @@ layout: wiki
 {:toc}
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fneonfiglet-black?logo=github)](https://github.com/joknarf/neonfiglet)
+[![Build and Release Packages](https://github.com/joknarf/neonfiglet/actions/workflows/release.yml/badge.svg)](https://github.com/joknarf/neonfiglet/actions/workflows/release.yml)
 [![bash](https://img.shields.io/badge/shell-bash%203.x%2b%20-blue.svg)]()
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 
