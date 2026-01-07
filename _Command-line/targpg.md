@@ -5,6 +5,7 @@ layout: wiki
 {:toc}
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Ftargpg-black?logo=github)](https://github.com/joknarf/targpg)
+[![Build and Release Packages](https://github.com/joknarf/targpg/actions/workflows/release.yml/badge.svg)](https://github.com/joknarf/targpg/actions/workflows/release.yml)
 [![bash](https://img.shields.io/badge/shell-bash%20-blue.svg)]()
 [![bash](https://img.shields.io/badge/OS-Linux%20|%20macOS%20|%20SunOS%20...-blue.svg)]()
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
