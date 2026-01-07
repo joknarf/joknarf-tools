@@ -6,7 +6,7 @@ layout: wiki
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fportune-black?logo=github)](https://github.com/joknarf/portune)
 [![Pypi version](https://img.shields.io/pypi/v/portune.svg?logo=pypi)](https://pypi.org/project/portune/)
-![example](https://github.com/joknarf/portune/actions/workflows/python-publish.yml/badge.svg)
+![example](https://github.com/joknarf/portune/actions/workflows/release.yml/badge.svg)
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 [![](https://pepy.tech/badge/portune)](https://pepy.tech/project/portune)
 [![Python versions](https://img.shields.io/badge/python-3.9+-blue.svg?logo=python)](https://shields.io/)
