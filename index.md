@@ -3,7 +3,7 @@
 Welcome to the documentation of all my daily shell productivity tools.
 
 ## Shell plugins:
-  * [thefly](_Shell-plugins/thefly.md) Shell plugin manager / env teleporter
+  * [thefly](_Shell-plugins/thefly.md) Shell plugin/dotfiles manager and teleporter
   * [shell-ng](_Shell-plugins/shell-ng.md) All joknarf plugins in one (nerdp/redo/seedee/complete-ng/selector)
   * [selector](_Shell-plugins/selector.md) Shell interactive menu plugin
   * [nerpd](_Shell-plugins/nerdp.md) Nerd prompt for bash/zsh/ksh
@@ -30,5 +30,10 @@ Welcome to the documentation of all my daily shell productivity tools.
 ## Fuse filesystems:
   * [fuse-sshautofs](_Fuse-fs/fuse-sshautofs.md) fuse automount sshfs filesystems accessing hostname dir
   * [fuse-memfs](_Fuse-fs/fuse-memfs.md) Simple fuse memory fs
+
+## Package repositories:
+  * [yum](https://joknarf.github.io/yum)
+  * [deb](https://joknarf.github.io/deb)
+  * [brew](https://joknarf.github.io/homebrew-tools)
 
 
