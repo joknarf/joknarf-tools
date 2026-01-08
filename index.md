@@ -36,7 +36,7 @@ Welcome to the documentation of all my daily shell productivity tools.
 | URL                                         | Activate repo command                                                                 |
 |---------------------------------------------|---------------------------------------------------------------------------------------|
 | [yum](https://joknarf.github.io/yum)        | sudo dnf install https://joknarf.github.io/yum/joknarf_repo.rpm                       |
-| [deb](https://joknarf.github.io/deb)        | curl -OL https://joknarf.github.io/deb/joknarf-repo.deb;sudo dpkg -i joknarf-repo.deb |
+| [deb](https://joknarf.github.io/deb)        | curl -OL https://joknarf.github.io/deb/pool/main/joknarf-repo.deb;sudo dpkg -i joknarf-repo.deb |
 | [brew](https://joknarf.github.io/homebrew-tools) | brew tap joknarf/tools                                                           |
 
 
