@@ -8,9 +8,10 @@ layout: wiki
 [![Pypi version](https://img.shields.io/pypi/v/run-para.svg?logo=pypi)](https://pypi.org/project/run-para/)
 [![example](https://github.com/joknarf/run-para/actions/workflows/release.yml/badge.svg)](https://github.com/joknarf/run-para/actions)
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
-[![](https://pepy.tech/badge/run-para)](https://pepy.tech/project/run-para)
+[![Downloads](https://pepy.tech/badge/run-para)](https://pepy.tech/project/run-para)
 [![Python versions](https://img.shields.io/badge/python-3.6+-blue.svg?logo=python)](https://shields.io/)
-[![bash](https://img.shields.io/badge/OS-%20Windows%20|%20Linux%20|%20macOS%20...-blue.svg)]()
+[![OS](https://img.shields.io/badge/OS-%20Windows%20|%20Linux%20|%20macOS%20...-blue.svg)]()
+[![Packages](https://img.shields.io/badge/Packages-%20rpm%20|%20deb%20|%20pkg%20|%20apk%20|%20brew%20-darkgreen.svg)](https://github.com/joknarf/run-para/releases/latest)
 
 
 

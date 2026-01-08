@@ -6,9 +6,10 @@ layout: wiki
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fmkshz-black?logo=github)](https://github.com/joknarf/mkshz)
 [![Build and Release Packages](https://github.com/joknarf/mkshz/actions/workflows/release.yml/badge.svg)](https://github.com/joknarf/mkshz/actions/workflows/release.yml)
-[![bash](https://img.shields.io/badge/shell-bash%20-blue.svg)]()
-[![bash](https://img.shields.io/badge/OS-Linux%20|%20macOS%20|%20SunOS%20...-blue.svg)]()
+[![Shell](https://img.shields.io/badge/shell-bash%20-blue.svg)]()
+[![OS](https://img.shields.io/badge/OS-Linux%20|%20macOS%20|%20SunOS%20...-blue.svg)]()
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
+[![Packages](https://img.shields.io/badge/Packages-%20rpm%20|%20deb%20|%20pkg%20|%20apk%20|%20brew%20-darkgreen.svg)](https://github.com/joknarf/mkshz/releases/latest)
 
 # mkshz
 self extracting shell gzip tarball packager.  
