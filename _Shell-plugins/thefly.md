@@ -14,18 +14,17 @@ position: 0
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 [![Packages](https://img.shields.io/badge/Packages-%20rpm%20|%20deb%20|%20pkg%20|%20apk%20|%20brew%20-darkgreen.svg)](https://github.com/joknarf/thefly/releases/latest)
 
-
 # thefly
 
 <img align=left width="150px" src="https://github.com/user-attachments/assets/a537f833-a64f-40b0-99a3-fff9cca08ce8">
 
 <br/>
-bash/zsh/ksh plugin/dotfiles manager and teleporter 
+bash/zsh/ksh plugin/dotfiles manager and teleporter
 
-Your shell env and plugins are available everywhere (hosts/users)  
-&nbsp;  
-bzzz bzzz !  
-<br/>  
+Your shell env and plugins are available everywhere (hosts/users)
+&nbsp;
+bzzz bzzz !
+<br/>
 
 ## Demo
 ![thefly_bzz](https://github.com/user-attachments/assets/1617632b-db08-40d4-a845-841e8ee5c7c6)
@@ -40,7 +39,39 @@ or
 $ git clone https://github.com/joknarf/thefly
 $ . thefly/thefly install
 ```
-Creates ~/.fly.d/fly
+Creates ~/.fly.d/fly and activate thefly manager for current user
+
+
+or use your prefered method according to your OS:
+
+```
+brew install joknarf/tools/thefly
+```
+
+```
+sudo dnf install https://github.com/joknarf/thefly/releases/latest/download/thefly.rpm
+```
+
+```
+curl -OL https://github.com/joknarf/thefly/releases/latest/download/thefly.deb
+sudo dpkg -i thefly.deb
+```
+
+```
+curl -OL https://github.com/joknarf/thefly/releases/latest/download/thefly.apk
+sudo apk add --allow-untrusted thefly.apk
+```
+
+```
+curl -OL https://github.com/joknarf/thefly/releases/latest/download/thefly.pkg
+sudo installer -pkg thefly.pkg -target /
+```
+
+then run:
+```
+thefly install
+. ~/.fly.d/activate
+```
 
 Add in your rc file (.profile .bash_profile .bashrc .zshrc):
 ```
@@ -55,7 +86,7 @@ fly help
 ```
 fly add joknarf/redo
 ```
-clones `https://github.com/joknarf/redo` in `~/.fly.d/plugins/redo` and sources the `plugin.<shell>`  
+clones `https://github.com/joknarf/redo` in `~/.fly.d/plugins/redo` and sources the `plugin.<shell>`
 (all plugins in `~/fly.d/plugins/*/*.plugin.<shell>` will be sourced at login with `fly source` in your shell rc file)
 
 ## Teleport plugins/shell env
@@ -66,8 +97,8 @@ $ flyas <user>
 or
 $ fsu <user>
 ```
-will duplicate `~/.fly.d` (without cvs files/tests) in `/tmp/.fly.<user>/<flyid>/.fly.d` and source all plugins  
-by default uses `<user>` shell, to force your favorite shell:  
+will duplicate `~/.fly.d` (without cvs files/tests) in `/tmp/.fly.<user>/<flyid>/.fly.d` and source all plugins
+by default uses `<user>` shell, to force your favorite shell:
 `fsub` or `bsu` (bash) - `fsuz` or `zsu` (zsh) - `fsuk` or `ksu` (ksh)
 
 * To another host/user
@@ -76,22 +107,22 @@ $ flyto [<ssh opts>] <user>[<@host>]
 or
 $ fssh [<ssh opts>] <user>[<@host>]
 ```
-will duplicate `~/.fly.d` (without cvs files/tests) in `<host>:/tmp/.fly.<user>/<flyid>/.fly.d` and source all plugins  
-by default uses `<user>` shell, to force your favorite shell:  
-`fsshb` or `bto` (bash) - `fsshz` or `zto` (zsh) - `fsshk` or `kto` (ksh)  
- 
-* To another shell  
-Change current shell and load your env/plugins:  
-`$ flysh <shell> # shell in bash ksh zsh`  
-or `fbash` - `fzsh` - `fksh`  
+will duplicate `~/.fly.d` (without cvs files/tests) in `<host>:/tmp/.fly.<user>/<flyid>/.fly.d` and source all plugins
+by default uses `<user>` shell, to force your favorite shell:
+`fsshb` or `bto` (bash) - `fsshz` or `zto` (zsh) - `fsshk` or `kto` (ksh)
 
- 
+* To another shell
+Change current shell and load your env/plugins:
+`$ flysh <shell> # shell in bash ksh zsh`
+or `fbash` - `fzsh` - `fksh`
+
+
 ## Customize env
 
-Putting your env in `~/.fly.d/.flyrc` will be automatically sourced (must be compatible with different shells)  
+Putting your env in `~/.fly.d/.flyrc` will be automatically sourced (must be compatible with different shells)
 Putting additional shell specific env in `~/.fly.d/.<shellname>rc` (.bashrc/.kshrc/.zshrc), will be automatically sourced for shell.
 
-anything in `~.fly.d` will be available through ssh/sudo (flyto/flyas) in `$FLY_HOME/.fly.d`  
+anything in `~.fly.d` will be available through ssh/sudo (flyto/flyas) in `$FLY_HOME/.fly.d`
 For example, just put your `.vimrc` in `~/.fly.d` and add in `~/.fly.d/.flyrc`:
 ```
 export VIMINIT="source $FLY_HOME/.fly.d/.vimrc"
@@ -107,22 +138,31 @@ export PATH="$PATH:$FLY_HOME/.fly.d/bin"
 
 ## Create your standalone fly package with your full shell env/plugins
 
-save your whole shell environment to use everywhere with standalone fly package.  
+Save your whole shell environment to use everywhere with standalone fly package.
 All your ~/.fly.d environment saved in autoextractable file. The fly package enables your env when sourced.
+Build your fly package (you can copy and use it directly to get your env or make it available on web server to remote download)
 ```
 $ flypack >fly.pak
+$ scp fly.pak myhost:
+$ . ./fly.pak source
 ```
-make your fly.pak available through url, to connect to a server with your env, use for example:
+load your env in current user (can be put in your .bashrc/.zshrc/.kshrc):
 ```
-$ ssh -t <host> '. <(curl -s -L https://raw.githubusercontent.com/joknarf/flypack/main/fly.pak) [install] [bash|ksh|zsh]'
+$ . <(curl -sL https://raw.githubusercontent.com/joknarf/flypack/main/fly.pak) source
 ```
-load your env in current user:
+install on current user in `~/.fly.d`:
 ```
-$ . <(curl -s -L https://raw.githubusercontent.com/joknarf/flypack/main/fly.pak) [install] [bash|ksh|zsh]
+$ . <(curl -sL https://raw.githubusercontent.com/joknarf/flypack/main/fly.pak) install
 ```
-
-`install` option to install in user home dir `~/.fly.d`, default in `/tmp/.fly.$USER`
-
+to connect to a server with your env in `/tmp/.fly.$USER`, use for example:
+```
+$ ssh -t <host> '. <(curl -sL https://raw.githubusercontent.com/joknarf/flypack/main/fly.pak) [bash|ksh|zsh]'
+```
+Connect to all servers with your fly pak with ssh config:
+```
+RequestTTY yes
+RemoteCommand . <(curl -sL https://raw.githubusercontent.com/joknarf/flypack/main/fly.pak)
+```
 
 ## Download/activate your env/plugins from your fly git repo or web server
 
@@ -140,17 +180,17 @@ create a tgz file with your .fly.d exposed on web server and activate env/plugin
 
 uses user ~.fly.d to load env/plugins
 ```
-$ ssh -t <user>@<host> '. <(curl https://raw.githubusercontent.com/joknarf/thefly/main/thefly) remote'  
+$ ssh -t <user>@<host> '. <(curl https://raw.githubusercontent.com/joknarf/thefly/main/thefly) remote'
 ```
 
 get env/plugins from .fly.d tgz (contains .fly.d/*)
 ```
-$ ssh -t <user>@<host> '. <(curl https://raw.githubusercontent.com/joknarf/thefly/main/thefly) remote <url .fly.d.tgz>'  
+$ ssh -t <user>@<host> '. <(curl https://raw.githubusercontent.com/joknarf/thefly/main/thefly) remote <url .fly.d.tgz>'
 ```
 
 get env/plugins from github repository (repo contains .fly.d contents, and can contain plugins submodules)
 ```
-$ ssh -t <user>@<host> '. <(curl https://raw.githubusercontent.com/joknarf/thefly/main/thefly) remote <git owner/repo .fly.d>'  
+$ ssh -t <user>@<host> '. <(curl https://raw.githubusercontent.com/joknarf/thefly/main/thefly) remote <git owner/repo .fly.d>'
 ```
 
 
@@ -166,6 +206,8 @@ or just add the optimized compilation of these shell plugins using just:
 $ fly add joknarf/shell-ng
 
 $ fly add joknarf/pgtree       # bash/ksh/zsh process hierarchy
+$ fly add joknarf/lsicon       # ls enhancer (colors/icons)
+$ fly add joknarf/dfbar        # df enhancer (colors/usage bar)
 ```
 |link                                                 |description                                                             |
 |-----------------------------------------------------|------------------------------------------------------------------------|
@@ -174,7 +216,9 @@ $ fly add joknarf/pgtree       # bash/ksh/zsh process hierarchy
 |[redo](https://github.com/joknarf/redo)              |access/search shell history command menu with shift-tab, and many more  |
 |[complete-ng](https://github.com/joknarf/complete-ng)|autocompletion with interactive menu                                    |
 |__[shell-ng](https://github.com/joknarf/shell-ng)__  |__optimized joknarf compilation of the above plugins__                  |
-|[pgtree](https://github.com/joknarf/pgtree)          |process search / tree / kill command line                               | 
+|[pgtree](https://github.com/joknarf/pgtree)          |process search / tree / kill command line                               |
+|[lsicon](https://github.com/joknarf/lsicon)          |ls command enhancer (colors/icons)                                      |
+|[dfbar](https://github.com/joknarf/dfbar)            |df command enhancer (colors/usage bar)                                  |
 
 ## Don't teleport a human with your fly !
 
