@@ -146,7 +146,7 @@ By default uses `<user>`'s shell.
 
 ### To another host
 
-connect to another host through ssh with your env
+ssh connect with interactive shell to another host with your env
 ```
 $ flyto [<ssh opts>] <user>[<@host>]
 or
