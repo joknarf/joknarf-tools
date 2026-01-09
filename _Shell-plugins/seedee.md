@@ -10,9 +10,11 @@ layout: wiki
 
 # seedee
 
-Navigate interactively through directories / history of visited directories using arrow keys from command line.  
-Compatibility : bash / ksh / zsh  
+Navigate interactively through directories / history of visited directories using arrow keys from command line.
+Compatibility : bash / ksh / zsh
 (compatible macos / debian / centos / solaris / alpine ...)
+
+## features
 
 * rapidily switch to already visited directories using interactive menu
 * use locate (mlocate/plocate) to rapidly cd to any directory
@@ -20,18 +22,32 @@ Compatibility : bash / ksh / zsh
   * directly from command line without any cd command using shift-arrow keys (bash/zsh)
 * cd autocompletion with interactive menu (bash)
 
-for a complete next-gen shell experience, see also these projects:
-
-* [nerdps1](https://github.com/joknarf/nerdps1) : auto-transportable dynamic PS1 prompt (you can see it in the demo)
-* [redo](https://github.com/joknarf/redo) : replacement of shell history command search (<kbd>Ctrl</kbd><kbd>R</kbd> or <kbd>Esc</kbd><kbd>/</kbd>) with interactive menu
-* [complete-ng](https://github.com/joknarf/complete-ng) : nextgen bash completion with interactive menu
+## demo
 
 ![demo](https://github.com/joknarf/cdhist/assets/10117818/ad3dc445-ba78-401e-9e46-ca87e73fdb3b)
+
+## install
+
+You can install through a shell plugin manager like the famous [thefly](https://github.com/joknarf/thefly) (plugin/dotfiles manager and teleporter)
+
+```
+fly add joknarf/seedee
+```
+
+for a complete next-gen shell experience, see also these projects:
+
+* [shell-ng](https://github.com/joknarf/shell-ng) : compilation of joknarf shell plugins which include seede and the following
+* [nerdp](https://github.com/joknarf/nerdp) : auto-transportable dynamic PS1 prompt (you can see it in the demo)
+* [redo](https://github.com/joknarf/redo) : replacement of shell history command search (<kbd>Ctrl</kbd><kbd>R</kbd> or <kbd>Esc</kbd><kbd>/</kbd>) with interactive menu
+* [complete-ng](https://github.com/joknarf/complete-ng) : nextgen bash/zsh <kbd>Tab</kbd> completion with interactive menu
+
+## key binding
 
 * using bash/zsh in emacs or vi mode, key binding is available as shortcuts:
   * default key binding with <kbd>Shift</kbd><kbd>Arrows</kbd> or <kbd>Ctrl</kbd><kbd>Arrows</kbd> (can be overridden using CD*BIND variables)
 
- 
+<div align="center">
+
 | Left                    | Up/Down                             | Right                       |
 |:-----------------------:|:-----------------------------------:|:---------------------------:|
 |                         |  previous dir in history            |                             |
@@ -39,8 +55,9 @@ for a complete next-gen shell experience, see also these projects:
 | <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/015131c5-8d8d-4c0d-8d44-a876fa6f2fb5"> |  <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/fe034fdc-dea5-49fa-be30-8f0bd9341208"> | <img width="50px" src="https://github.com/joknarf/cdhist/assets/10117818/1d254f15-050e-4ff9-9f5d-002e9ff4802f"> |
 |  parent dir (..)         | dir history browser                | dir browser                 |
 
-directory pattern can be put on command line before hitting shortcut to filter result  
+directory pattern can be put on command line before hitting shortcut to filter result
 putting on command line : `work` and hitting <kbd>Shift</kbd><kbd>▲</kbd> will bring you to last visited directory containing `work`
+(all <kbd>Shift</kbd><kbd>Arrow</kbd> are also binded to <kbd>Ctrl</kbd><kbd>Arrow</kbd>)
 
 | key                                         | action                                               |
 |---------------------------------------------|------------------------------------------------------|
@@ -50,6 +67,7 @@ putting on command line : `work` and hitting <kbd>Shift</kbd><kbd>▲</kbd> will
 |<kbd>Shift</kbd><kbd>◀</kbd>                 | go to parent dir (cd ..)                             |
 |<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>▼</kbd>  | search directories matching pattern in locate db     |
 
+</div>
 
 * using bash, `<tab>` cd auto completion can be enabled for `cd` command:
   * setting env variable `CDCOMPLETE=y` before sourcing `seedee`
@@ -58,10 +76,10 @@ putting on command line : `work` and hitting <kbd>Shift</kbd><kbd>▲</kbd> will
 
 |key                             | action                                                |
 |--------------------------------|-------------------------------------------------------|
-|<kbd>▼</kbd>                    | select next item                                      | 
+|<kbd>▼</kbd>                    | select next item                                      |
 |<kbd>▲</kbd>                    | select prev item                                      |
 |<kbd>End</kbd>                  | select last item                                      |
-|<kbd>Home</kbd>                 | select first item                                     | 
+|<kbd>Home</kbd>                 | select first item                                     |
 |<kbd>▶</kbd>                    | browse selected directory                             |
 |<kbd>◀</kbd>                    | browse parent directory                               |
 |<kbd>Shift</kbd><kbd>▶</kbd>   | browse selected directory with subdirectories depth 4  |
