@@ -6,37 +6,18 @@ title: nerdp
 {:toc}
 
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Fnerdp-black?logo=github)](https://github.com/joknarf/nerdp)
-[![bash](https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh%20-blue.svg)]()
+[![Shell](https://img.shields.io/badge/shell-bash%20|%20zsh%20|%20ksh%20-blue.svg)]()
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 
 # nerdp
-Nerd prompt for bash/ksh/zsh (mksh/ash)  
-Light version of [nerdps1](https://github.com/joknarf/nerdps1) local nerd prompt w/o psudo/pssh (as [thefly](https://github.com/joknarf/thefly) is doing plugin teleportation)
+Nerd prompt for bash/ksh/zsh (mksh/ash)
 
-## Font for prompt
-
-For better experience, install a Nerd font on your system/console (Windows console / Windows terminal / putty / git-bash / CmdEr / iTerm2 / Terminator / MobaXterm / VScode terminal / Pycharm terminal...):  
-[Consolas NF](https://github.com/wclr/my-nerd-fonts/raw/master/Consolas%20NF/Consolas%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf)  
-[Nerd Fonts](https://www.nerdfonts.com/)
-
-on Unix, copy to `~/.fonts` and run `fc-cache -fv` then relaunch your terminal and set the font
-
-## Installation
-
-* You can install using a plugin manager like sheldon / zgenom ... : plugin joknarf/nerdp
-
-* Or you can activate the nerdp prompt directly using:  
-`$ . <(curl -s https://raw.githubusercontent.com/joknarf/nerdp/main/nerdp)`
-* Or you can get your local copy using:  
-`$ curl -sL -o ~/nerdp https://raw.githubusercontent.com/joknarf/nerdp/main/nerdp`  
-then source it in your profile/rcfile:  
-`. ~/nerdp`
-
-
+## demo
 <img width="900" alt="image" src="https://github.com/joknarf/nerdps1/assets/10117818/ebc3f680-69b1-45d2-b1ce-b09b09b545f2">
 
+## features
 
-Following information displayed:
+The following information is displayed:
 
 * exit code if command returns code is not 0
 * elapse time during command if command lasts more than 1s (bash / zsh / ksh >2012)
@@ -48,9 +29,29 @@ Following information displayed:
 * 1min cpu load (colorized default `ps1_loadlimits` "10 20")
 * Available memory (colorized default `ps1_memlimits` "300 100" MB)
 * Time
-  
+
+## Install
+
+* You can install using a plugin manager like sheldon / zgenom or the best [thefly](https://github.com/joknarf/thefly) : plugin joknarf/nerdp
+`fly add joknarf/nerdp`
+* Or you can get your local copy and source in your rc file:
+```
+curl -sL -o ~/nerdp https://raw.githubusercontent.com/joknarf/nerdp/main/nerdp
+. ~/nerdp
+```
+* To test it you can activate the nerdp prompt directly using:
+`$ . <(curl -s https://raw.githubusercontent.com/joknarf/nerdp/main/nerdp)`
+
+## Font for prompt
+
+For better experience, install a Nerd font on your system/console (Windows console / Windows terminal / putty / git-bash / CmdEr / iTerm2 / Terminator / MobaXterm / VScode terminal / Pycharm terminal...):
+[Nerd Fonts](https://www.nerdfonts.com/)
+
+on Unix, copy to `~/.fonts` and run `fc-cache -fv` then relaunch your terminal and set the font
+
+
 ## choose your style
-set `ps1_style` variable to available styles in your .nerdrc  
+set `ps1_style` variable to available styles in your .nerdrc
 You can test using `ps1_style` function:
 
 ![image](https://github.com/joknarf/nerdps1/assets/10117818/f8d32297-73f4-4827-9802-b635c9d9a481)
@@ -58,7 +59,7 @@ You can test using `ps1_style` function:
 
 ## Font rendering
 
-If your terminal does not manage correctly nerd font symbols, you may switch to more commonly supported powerline font symbols, or even disable the segment separator symbols.  
+If your terminal does not manage correctly nerd font symbols, you may switch to more commonly supported powerline font symbols, or even disable the segment separator symbols.
 You can use : `ps1_display` function/var to switch prompt display symbol characters:
 ```
 $ ps1_display -h
@@ -68,7 +69,7 @@ usage: ps1_display <option>
 
 ## Customizing prompt
 
-You can add informations on the prompt using ps1_info variable:  
+You can add informations on the prompt using ps1_info variable:
 
 * `ps1_info="MYVAR MYVAR2..."` : will display content of variables
 * `ps1_info="(myfunc) (myfunc2)"` : will display output of functions myfunc myfunc2
