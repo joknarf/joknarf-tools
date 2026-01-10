@@ -13,7 +13,6 @@ layout: wiki
 [![Downloads](https://pepy.tech/badge/pgtree)](https://pepy.tech/project/pgtree)
 [![Packages](https://img.shields.io/badge/Packages-%20rpm%20|%20deb%20|%20pkg%20|%20apk%20|%20brew%20-darkgreen.svg)](https://github.com/joknarf/pgtree/releases/latest)
 
-
 # pgtree
 Unix process hierachy tree display for specific processes (kind of mixed pgrep + pstree)
 
@@ -36,11 +35,10 @@ _pgtree Tested on various versions of RedHat / CentOS / Ubuntu / Debian / Suse /
 
 _(uses -o fname on Solaris)_
 
-## Installation
+## Install
 FYI, the `pgtree/pgtree.py` is standalone and can be directly copied/used anywhere without any installation.
 
-installation using pip:
-
+install using pip:
 ```
 # pip install pgtree
 ```
@@ -129,5 +127,6 @@ Use watch utility to follow process tree:
 
 ## Demo
 
-<img alt="output" src="https://user-images.githubusercontent.com/10117818/91558307-64fc8d00-e936-11ea-85bc-08eae29a58ce.gif" width="850px">
+![pgtree](https://github.com/user-attachments/assets/9e47439b-e212-48d0-9f5e-1347dbfe3bea)
+
 
