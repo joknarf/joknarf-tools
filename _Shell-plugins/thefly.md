@@ -27,7 +27,7 @@ bzzz bzzz !
 
 <br/>
 
-What the point to have a fine tuned local shell environment if you lose it as soon as you connect to another server / sudo to another user
+What's the point to have a fine tuned local shell environment if you lose it as soon as you connect to another server / sudo to another user
 
 ## Demo
 ![thefly_bzz](https://github.com/user-attachments/assets/1617632b-db08-40d4-a845-841e8ee5c7c6)
