@@ -9,7 +9,7 @@ Welcome to the documentation of all my daily shell productivity tools.
   * [nerpd](_Shell-plugins/nerdp.md) Nerd prompt for bash/zsh/ksh
   * [redo](_Shell-plugins/redo.md) Interactive command history menu / completion
   * [seedee](_Shell-plugins/seedee.md) Interactive directory history menu / completion
-  * [complete-ng](_Shell-plugins/complete-ng.md) Command line completion interactive
+  * [complete-ng](_Shell-plugins/complete-ng.md) Interactive Command line Tab completion
 
 ## Command line tools:
   * [pgtree](_Command-line/pgtree.md) Unix process hierachy tree display / search / kill
