@@ -4,7 +4,7 @@ layout: wiki
 * TOC
 {:toc}
 
-[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Ftty-keepalive-black?logo=github)](https://github.com/joknarf/tty-keepalive)
+[![GitHub](https://img.shields.io/badge/GitHub-joknarf%2Ftty--keepalive-black?logo=github)](https://github.com/joknarf/tty-keepalive)
 [![Shell](https://img.shields.io/badge/shell-bash%20-blue.svg)]()
 [![Licence](https://img.shields.io/badge/licence-MIT-blue.svg)](https://shields.io/)
 
