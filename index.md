@@ -1,4 +1,5 @@
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf-black?logo=github)](https://github.com/joknarf)
+[GitHub starts](https://img.shields.io/github/stars/joknarf?label=stars)
 
 Welcome to the documentation of all my daily shell productivity tools.
 
