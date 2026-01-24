@@ -1,5 +1,5 @@
 [![GitHub](https://img.shields.io/badge/GitHub-joknarf-black?logo=github)](https://github.com/joknarf)
-![GitHub Org's stars](https://img.shields.io/github/stars/joknarf?style=plastic&logo=GitHub&labelColor=grey&color=black)
+![GitHub Org's stars](https://img.shields.io/github/stars/joknarf?style=flat&logo=GitHub&labelColor=grey&color=black)
 
 
 Welcome to the documentation of all my daily shell productivity tools.
