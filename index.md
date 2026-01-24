@@ -22,6 +22,7 @@ Welcome to the documentation of all my daily shell productivity tools.
   * [dfbar](_Command-line/dfbar.md) simple df enhancer (colors/percent bar)
   * [neonfiglet](_Command-line/neonfiglet.md) animated colorfull rainbow banners
   * [shellme](_Command-line/shellme.md) Human shell typing simulator
+  * [tty-keepalive](_Command-line/tty-keepalive.md) TTY activity simulator
 
 ## Web tools embedded servers:
   * [pywebfs](_Web-tools/pywebfs.md) Simple http(s) file ferver

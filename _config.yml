@@ -45,6 +45,7 @@ nav:
     - DFbar: dfbar.md
     - NeonFIGlet: neonfiglet.md
     - Shellme: shellme.md
+    - Tty-Keepalive: tty-keepalive.md
   - Web tools:
     - Pywebfs: pywebfs.md
     - Pywebexec: pywebexec.md
